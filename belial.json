@@ -1,0 +1,305 @@
+{
+	"name": "Belial (Prince of the Covetous, Lord of Lusts)",
+	"source": "dkNinja",
+	"size": [
+		"M"
+	],
+	"type": {
+		"type": "fiend",
+		"tags": [
+			"devil"
+		]
+	},
+	"alignment": [
+		"L",
+		"E"
+	],
+	"ac": [
+		{
+			"ac": 19,
+			"from": [
+				"natural armor"
+			]
+		}
+	],
+	"hp": {
+		"formula": "24d8 + 168",
+		"average": 276
+	},
+	"speed": {
+		"walk": 40,
+		"fly": 60
+	},
+	"str": 24,
+	"dex": 22,
+	"con": 24,
+	"int": 24,
+	"wis": 18,
+	"cha": 28,
+	"skill": {
+		"perception": "+11",
+		"arcana": "+14",
+		"acrobatics": "+13",
+		"deception": "+16",
+		"insight": "+11",
+		"intimidation": "+16",
+		"persuasion": "+16",
+		"stealth": "+13"
+	},
+	"passive": 21,
+	"cr": "22",
+	"action": [
+		{
+			"name": "Multiattack",
+			"entries": [
+				"Belial makes one Fork of Suffering attack and two Corrupting Touch attacks."
+			]
+		},
+		{
+			"name": "Fork of Suffering",
+			"entries": [
+				"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) slashing damage."
+			]
+		},
+		{
+			"name": "Javelin",
+			"entries": [
+				"{@atk mw,rw} {@hit 14} to hit, reach 10 ft., one target. {@h}25 ({@damage 4d8 + 7}) piercing damage and the target must succeed a {@dc 21} constitution saving throw or suffer an addition {@h}7 ({@damage 2d6}) necrotic damage at the start of each of its turns. The target creature may attempt the save after suffering the additional damage, ending the effect with a successful save. The effect ends if the target creature is the recipient of healing magic."
+			]
+		},
+		{
+			"name": "Corrupting Touch",
+			"entries": [
+				"{@atk mw} {@hit 14} to hit, reach 5 ft., one target. {@h}20 ({@damage 3d8 + 7}) psychic damage and the target must succeed on a DC24 Wisdom saving throw or become {@condition charmed} by Belial for one minute."
+			]
+		}
+	],
+	"attachedItems": [
+		"javelin|phb"
+	],
+	"miscTags": [
+		"MW",
+		"RW",
+		"RCH",
+		"MLW",
+		"THW",
+		"AOE"
+	],
+	"hasFluff": true,
+	"hasFluffImages": true,
+	"token": {
+		"name": "Aarakocra",
+		"source": "MM"
+	},
+	"fluff": {
+		"entries": [
+			"Belial is a 10-foot-tall handsome humanoid with chalky skin and reddish-brown hair and beard. Rams horns curling from his wide brow flicker with hellfire. Charred wings sprout from the fiend’s back, revealing the last vestiges of his once angelic form.",
+			"Belial is the most capricious and chaotic of the princes of darkness, leaving many among the courts of Hell to wonder if he has not been fully corrupted by demonic influences. Belial, more than others has made pacts with demons, and dark gods of the Underworld. He is always on the hunt for portals that allow him greater time and access to the mortal realms.",
+			"Belial’s lair is found in the storm-thundered Hell Ring of Covetous where the lightning-wracked skies flock with harpies, night hags, succubi, and erinyes. Belial’s legions throng with his many progeny, themselves brutal combatants who use complex asymmetrical tactics to finish off foes who often greatly outnumber them."
+		]
+	},
+	"shortName": "Belial",
+	"senses": [
+		"darkvision 60 ft."
+	],
+	"senseTags": [
+		"D"
+	],
+	"languages": [
+		"Abyssal",
+		"Common",
+		"Celestial",
+		"Elvish",
+		"Dwarvish",
+		"Draconic",
+		"Halfling",
+		"Giant",
+		"Gnomish",
+		"Goblin",
+		"Infernal",
+		"Orc",
+		"telepathy 100ft"
+	],
+	"languageTags": [
+		"AB",
+		"C",
+		"CE",
+		"E",
+		"D",
+		"DR",
+		"H",
+		"GI",
+		"G",
+		"GO",
+		"I",
+		"O",
+		"TP"
+	],
+	"save": {
+		"con": "+14",
+		"wis": "+11",
+		"cha": "+16"
+	},
+	"resist": [
+		"cold",
+		{
+			"resist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"note": "from nonmagical attacks that are not silver",
+			"cond": true
+		}
+	],
+	"immune": [
+		"fire",
+		"poison"
+	],
+	"conditionImmune": [
+		"poisoned"
+	],
+	"trait": [
+		{
+			"name": "Charming Devil",
+			"entries": [
+				"Belial has a way with words, which he infuses with his own Hellish pheromones. At the start of his turn, Belial chooses one of the following effects: Indecent Proposal. All who can hear Belial and are within 30 feet must succeed on a {@dc 25} Wisdom saving throw or suffer the effects of the spell {@spell suggestion}."
+			]
+		},
+		{
+			"name": "Maleficent Mesmerism",
+			"entries": [
+				"Belial suggestive charms and animal magnetism leave his listeners enrapt in his words so that they are unable to move save to gape at his animal magnetism. All who can see Belial and are within 30 feet must succeed on a {@dc 25} Wisdom saving throw or become {@condition incapacitated} until the end of their next turn."
+			]
+		},
+		{
+			"name": "Devil's Sight",
+			"entries": [
+				"Magical darkness doesn’t impede the devil’s darkvision"
+			]
+		},
+		{
+			"name": "Legendary Resistance (3/Day)",
+			"entries": [
+				"If Belial fails a saving throw, it can choose to succeed instead."
+			]
+		},
+		{
+			"name": "Magic Resistance",
+			"entries": [
+				"Belial has advantage on saving throws against spells and other magical effects."
+			]
+		},
+		{
+			"name": "Magic Weapons",
+			"entries": [
+				"Belial's weapon attacks are magical."
+			]
+		},
+		{
+			"name": "Regeneration",
+			"entries": [
+				"Belial regains 10 hit points at the start of his turn. If Belial takes damage from a silvered weapon, this trait doesn't function at the start of Belial's next turn. Belial is destroyed only if he starts his turn with 0 hit points and doesn't regenerate."
+			]
+		}
+	],
+	"traitTags": [
+		"Devil's Sight",
+		"Legendary Resistances",
+		"Magic Resistance",
+		"Magic Weapons",
+		"Regeneration"
+	],
+	"isNamedCreature": true,
+	"spellcasting": [
+		{
+			"name": "Innate Spellcasting",
+			"headerEntries": [
+				"Belial’s innate spellcasting ability is Charisma (spell save {@dc 24}, +16 to hit with spell attacks). He can cast the following spells, requiring no material components:"
+			],
+			"will": [
+				"{@spell bane}",
+				"{@spell detect evil and good}",
+				"{@spell detect magic}",
+				"{@spell detect thoughts}",
+				"{@spell dispel magic}",
+				"{@spell dominate beast}",
+				"{@spell dominate monster}",
+				"{@spell enthrall}",
+				"{@spell hold monster}",
+				"{@spell hold person}",
+				"{@spell magic circle}",
+				"{@spell modify memory}",
+				"{@spell suggestion}",
+				"{@spell teleport} (self only)"
+			],
+			"daily": {
+				"1e": [
+					"{@spell antipathy/sympathy}",
+					"{@spell mass suggestion}"
+				]
+			},
+			"monthly": {
+				"1e": [
+					"{@spell wish}"
+				]
+			},
+			"ability": "cha",
+			"type": "spellcasting"
+		}
+	],
+	"spellcastingTags": [
+		"I"
+	],
+	"actionTags": [
+		"Multiattack"
+	],
+	"conditionInflict": [
+		"charmed",
+		"prone"
+	],
+	"legendary": [
+		{
+			"name": "Spear Thrust",
+			"entries": [
+				"Belial makes a Fork of Suffering attack."
+			]
+		},
+		{
+			"name": "Hordes of Admirers",
+			"entries": [
+				"Belial summons {@dice 2d6} commoners he has corrupted on the mortal planes and brings them to his palace for his own amusement, causing them to appear within 30 feet of Belial. They are useless in battle but provide a convenient distraction and slow attackers."
+			]
+		},
+		{
+			"name": "Wing Buffet (cost 2 actions)",
+			"entries": [
+				"Belial buffets the air with his wings to create a 20-foot cone of powerful wind. All creatures caught in this area must succeed at a {@dc 25} Strength check or be knocked {@condition prone} and pushed 15 feet away from Belial."
+			]
+		},
+		{
+			"name": "Fiendish Recovery (costs 2 actions)",
+			"entries": [
+				"Belial recovers 50 hit points and ends one condition affecting him."
+			]
+		}
+	],
+	"damageTags": [
+		"N",
+		"P",
+		"S",
+		"Y"
+	],
+	"damageTagsSpell": [
+		"N",
+		"O"
+	],
+	"savingThrowForced": [
+		"constitution",
+		"wisdom"
+	],
+	"savingThrowForcedSpell": [
+		"charisma",
+		"wisdom"
+	]
+}
