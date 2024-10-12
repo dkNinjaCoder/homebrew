@@ -87,10 +87,6 @@
 	],
 	"hasFluff": true,
 	"hasFluffImages": true,
-	"token": {
-		"name": "Aarakocra",
-		"source": "MM"
-	},
 	"fluff": {
 		"entries": [
 			"Belial is a 10-foot-tall handsome humanoid with chalky skin and reddish-brown hair and beard. Rams horns curling from his wide brow flicker with hellfire. Charred wings sprout from the fiend’s back, revealing the last vestiges of his once angelic form.",
@@ -284,6 +280,10 @@
 			]
 		}
 	],
+	"token": {
+		"name": "Pit Fiend",
+		"source": "MM"
+	},
 	"damageTags": [
 		"N",
 		"P",
