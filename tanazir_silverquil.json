@@ -1,9 +1,8 @@
 {
 	"name": "Tanazir Silverquil",
-	"isNpc": true,
 	"isNamedCreature": true,
-	"source": "CustomCampaign",
-	"page": 1,
+	"source": "",
+	"page": 0,
 	"size": [
 		"G"
 	],
@@ -23,7 +22,7 @@
 	"hp": {
 		"average": 585,
 		"formula": "30d20 + 270"
-	],
+	},
 	"speed": {
 		"walk": 40,
 		"fly": 80,
@@ -48,36 +47,63 @@
 		"persuasion": "+14",
 		"stealth": "+18"
 	},
-	"resist": [
-		"necrotic",
-		{
-			"resist": [
-				"bludgeoning",
-				"piercing",
-				"slashing"
-			],
-			"note": "from nonmagical attacks while in dim light or darkness",
-			"cond": true
-		}
-	],
-	"immune": [
-		"poison"
-	],
-	"conditionImmune": [
-		"poisoned",
-		"charmed"
-	],
 	"senses": [
 		"blindsight 60 ft.",
 		"darkvision 120 ft."
 	],
 	"passive": 30,
+	"resist": [
+		"necrotic",
+		"bludgeoning",
+		"piercing",
+		"slashing from nonmagical attacks (while in dim light or darkness)"
+	],
+	"immune": [
+		"poison"
+	],
+	"conditionImmune": [
+		"charmed",
+		"poisoned"
+	],
 	"languages": [
 		"Common",
 		"Draconic",
 		"Sylvan"
 	],
 	"cr": "26",
+	"spellcasting": [
+		{
+			"name": "Sorcerer Spellcasting",
+			"type": "spellcasting",
+			"headerEntries": [
+				"Tanazir's spellcasting ability is Charisma (spell save {@dc 22}, {@hit 14} to hit with spell attacks). He requires no material components to cast his spells. Tanazir can cast the following spells:"
+			],
+			"spells": {
+				"0": {
+					"spells": [
+						"{@spell chill touch}",
+						"{@spell minor illusion}",
+						"{@spell poison spray}",
+						"{@spell prestidigitation}",
+						"{@spell shocking grasp} *",
+						"{@spell shield}",
+						"{@spell absorb elements|XGE} *",
+						"{@spell hold person}",
+						"{@spell slow}",
+						"{@spell counterspell}",
+						"{@spell greater invisibility} *",
+						"{@spell dimension door}",
+						"{@spell cloudkill}",
+						"{@spell hold monster}",
+						"{@spell disintegrate} *",
+						"{@spell reverse gravity} *",
+						"{@spell time stop} *"
+					]
+				}
+			},
+			"ability": "cha"
+		}
+	],
 	"trait": [
 		{
 			"name": "Amphibious",
@@ -122,47 +148,6 @@
 			]
 		}
 	],
-	"spellcasting": [
-		{
-			"name": "Sorcerer Spellcasting",
-			"type": "spellcasting",
-			"headerEntries": [
-				"Tanazir's spellcasting ability is Charisma (spell save {@dc 22}, {@hit 14} to hit with spell attacks). He requires no material components to cast his spells. He can cast the following spells:"
-			],
-			"will": [
-				"{@spell chill touch}",
-				"{@spell minor illusion}",
-				"{@spell poison spray}",
-				"{@spell prestidigitation}",
-				"{@spell shocking grasp}",
-				"{@spell misty step}",
-				"{@spell shield}",
-				"{@spell absorb elements}"
-			],
-			"daily": {
-				"3": [
-					"{@spell mirror image}",
-					"{@spell hold person}",
-					"{@spell slow}",
-					"{@spell counterspell}",
-					"{@spell greater invisibility}"
-				],
-				"2": [
-					"{@spell blight}",
-					"{@spell dimension door}",
-					"{@spell cloudkill}",
-					"{@spell hold monster}",
-					"{@spell disintegrate}"
-				],
-				"1": [
-					"{@spell finger of death}",
-					"{@spell reverse gravity}",
-					"{@spell time stop}"
-				]
-			},
-			"ability": "cha"
-		}
-	],
 	"action": [
 		{
 			"name": "Multiattack",
@@ -173,7 +158,7 @@
 		{
 			"name": "Chronal Stasis",
 			"entries": [
-				"Tanazir briefly steps completely outside the flow of time. This action functions exactly like the {@spell time stop} spell, giving Tanazir 2 ({@dice 1d3 + 1}) immediate, consecutive turns during which other creatures cannot move or act. If Tanazir leaves this state or affects another creature or an object worn or carried by them, the stasis ends immediately. Once Tanazir uses this action, he cannot use it again until the start of his next initiative turn."
+				"Tanazir briefly steps completely outside the flow of time. This action functions exactly like the *time stop* spell, giving Tanazir 2 ({@dice 1d3 + 1}) immediate, consecutive turns during which other creatures cannot move or act. If Tanazir leaves this state or affects another creature or an object worn or carried by them, the stasis ends immediately. Once Tanazir uses this action, he cannot use it again until the start of his next initiative turn."
 			]
 		},
 		{
@@ -201,16 +186,11 @@
 			]
 		},
 		{
-			"name": "Breath Weapons (Recharge 5–6)",
+			"name": "Breath Weapons {@recharge 5}",
 			"entries": [
 				"Tanazir uses one of the following breath weapons:",
-				{
-					"type": "list",
-					"items": [
-						"**Shadow-Poison Breath:** Tanazir exhales a 90-foot cone of decaying, toxic shadow. Each creature in that area must make a {@dc 25} Constitution saving throw, taking 84 ({@damage 24d6}) necrotic damage on a failed save, or half as much on a success. A humanoid reduced to 0 hit points by this damage dies, and an undead shadow rises from its corpse under Tanazir's permanent control.",
-						"**Time-Rift Breath:** Tanazir exhales a shimmering wave of chronal distortion in a 90-foot cone. Each creature in that area must make a {@dc 25} Wisdom saving throw. On a failed save, a creature takes 55 ({@damage 10d10}) force damage and is cast forward in time: it disappears, magically stepping out of the timeline until the end of Tanazir's next turn, effectively losing its placement in the initiative order and dropping concentration on any spells. On a successful save, a creature takes half as much damage and isn't displaced."
-					]
-				}
+				"Shadow-Poison Breath:** Tanazir exhales a 90-foot cone of decaying, toxic shadow. Each creature in that area must make a {@dc 25} Constitution saving throw, taking 84 ({@damage 24d6}) necrotic damage on a failed save, or half as much on a success. A humanoid reduced to 0 hit points by this damage dies, and an undead shadow rises from its corpse under Tanazir's permanent control.",
+				"Time-Rift Breath:** Tanazir exhales a shimmering wave of chronal distortion in a 90-foot cone. Each creature in that area must make a {@dc 25} Wisdom saving throw. On a failed save, a creature takes 55 ({@damage 10d10}) force damage and is cast forward in time: it disappears, magically stepping out of the timeline until the end of Tanazir's next turn, effectively losing its placement in the initiative order and dropping {@status concentration} on any spells. On a successful save, a creature takes half as much damage and isn't displaced."
 			]
 		}
 	],
@@ -226,7 +206,7 @@
 		{
 			"name": "Detect / Shadow Stealth",
 			"entries": [
-				"Tanazir makes a Wisdom (Perception) check or takes the Hide action if he is in dim light or darkness."
+				"Tanazir makes a Wisdom ({@skill Perception}) check or takes the Hide action if he is in dim light or darkness."
 			]
 		},
 		{
@@ -250,77 +230,109 @@
 		{
 			"name": "Chronal Rewind (Costs 3 Actions)",
 			"entries": [
-				"Tanazir targets one creature he can see within 90 feet. The target must succeed on a {@dc 22} Wisdom saving throw or have its individual timeline rewound to the start of the round: it is teleported back to the physical space it occupied at the start of the round, any spell it cast since then is undone (expending the slot regardless), and any hit points it recovered are lost."
+				"Tanazir targets one creature he can see within 90 feet. The target must succeed on a {@dc 22} Wisdom saving throw or have its individual timeline rewound to the start of the round: it is teleported back to the physical space it occupied at the start of the round, any spell it cast since then is undone (expending the slot regardless), and any hit points it recovered are lost.",
+				"Lair Actions",
+				"On initiative count 20 (losing initiative ties), Tanazir takes a lair action to cause one of the following effects; Tanazir can't use the same effect two rounds in a row:"
+			]
+		},
+		{
+			"name": "Chronal Echoes",
+			"entries": [
+				"Tanazir manipulates the timestream of the lair, forcing the echoes of past and future moments to collide. Up to three creatures Tanazir can see within 120 feet must succeed on a {@dc 22} Wisdom saving throw or be affected by a temporal duplicate. Until initiative count 20 on the next round, whenever an affected target takes an action, moves, or casts a spell, it must immediately roll a {@dice d6}. On a 1-3, the action or movement is delayed and fails to resolve until the very end of the current turn (wasting the tactical timing of spells or movement)."
+			]
+		},
+		{
+			"name": "Umbral Fog",
+			"entries": [
+				"A cloud of thick, caustic, shadow-infused green gas fills a 20-foot-radius sphere centered on a point Tanazir can see within 120 feet. The fog spreads around corners, and its area is heavily obscured. Each creature that starts its turn in the fog or enters it for the first time on a turn must make a {@dc 22} Constitution saving throw, taking 28 ({@damage 8d6}) poison damage and 14 ({@damage 4d6}) necrotic damage on a failed save, or half as much on a success. The fog lasts until initiative count 20 on the next round."
+			]
+		},
+		{
+			"name": "Grasping Timelines",
+			"entries": [
+				"Tendrils of dark, vine-like shadows erupt from the floor, walls, and ceiling in a 40-foot radius centered on a point Tanazir chooses within 90 feet. Each creature in that area must succeed on a {@dc 22} Strength saving throw or be {@condition restrained} by the paradoxical timeline fragments. A creature can use its action to make a {@dc 22} Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check, freeing itself or another creature within its reach on a success. The vines disappear on initiative count 20 of the next round.",
+				"Regional Effects",
+				"The region containing Tanazir Silverquil's lair is warped by his multifaceted draconic magic, creating one or more of the following effects:"
+			]
+		},
+		{
+			"name": "Thickened Wilderness & Umbral Overgrowth",
+			"entries": [
+				"Within 6 miles of the lair, forests and vegetation mutate rapidly, growing thick with thorned vines and leaves that actively absorb light. The area is permanently treated as dim light, even during a clear midday. Furthermore, any check made to track a creature or navigate through this region has disadvantage due to the shifting undergrowth."
+			]
+		},
+		{
+			"name": "Chronal Fractures",
+			"entries": [
+				"Within 6 miles of the lair, local time becomes unstable. Time passes differently for travelers: a group might spend what feels like 1 hour traversing a forest path, only to discover that 24 hours have passed in the outside world (or vice versa). Clocks, sundials, and magical time-tracking items spin wildly or freeze completely."
+			]
+		},
+		{
+			"name": "Caustic Fog & Whispering Shadows",
+			"entries": [
+				"Within 1 mile of the lair, a light, toxic green mist blankets the ground. Beasts native to the area become aggressive and corrupted, possessing glowing emerald eyes and shadows that seem detached from their physical bodies. Creatures resting within this area hear faint, overlapping echoes of their own past and future conversations whispering from the fog.",
+				"If Tanazir Silverquil dies, these effects fade over the course of {@dice 1d10} days."
 			]
 		}
 	],
-	"legendaryGroup": {
-		"name": "Tanazir Silverquil",
-		"source": "CustomCampaign"
-	},
-	"hasFluff": true,
-	"fluff": {
-		"name": "Tanazir Silverquil",
-		"source": "CustomCampaign",
-		"entries": [
-			{
-				"type": "entries",
-				"entries": [
-					{
-						"type": "entries",
-						"entries": [
-							{
-								"type": "entries",
-								"name": "Tanazir Silverquil's Lair",
-								"entries": [
-									"Tanazir rules from a fractured temporal hub deep within a twilight-choked primordial swamp node where paths through reality actively overlap.",
-									{
-										"type": "entries",
-										"entries": [
-											{
-												"type": "entries",
-												"name": "Lair Actions",
-												"entries": [
-													"On initiative count 20 (losing initiative ties), Tanazir takes a lair action to cause one of the following effects; Tanazir can’t use the same effect two rounds in a row:",
-													{
-														"type": "list",
-														"items": [
-															"**Chronal Echoes:** Tanazir manipulates the timestream of the lair, forcing the echoes of past and future moments to collide. Up to three creatures Tanazir can see within 120 feet must succeed on a {@dc 22} Wisdom saving throw or be affected by a temporal duplicate. Until initiative count 20 on the next round, whenever an affected target takes an action, moves, or casts a spell, it must immediately roll a {@dice d6}. On a 1–3, the action or movement is delayed and fails to resolve until the very end of the current turn.",
-															"**Umbral Fog:** A cloud of thick, caustic, shadow-infused green gas fills a 20-foot-radius sphere centered on a point Tanazir can see within 120 feet. The fog spreads around corners, and its area is heavily obscured. Each creature that starts its turn in the fog or enters it for the first time on a turn must make a {@dc 22} Constitution saving throw, taking 28 ({@damage 8d6}) poison damage and 14 ({@damage 4d6}) necrotic damage on a failed save, or half as much on a success. The fog lasts until initiative count 20 on the next round.",
-															"**Grasping Timelines:** Tendrils of dark, vine-like shadows erupt from the floor, walls, and ceiling in a 40-foot radius centered on a point Tanazir chooses within 90 feet. Each creature in that area must succeed on a {@dc 22} Strength saving throw or be {@condition restrained} by the paradoxical timeline fragments. A creature can use its action to make a {@dc 22} Strength (Athletics) or Dexterity (Acrobatics) check, freeing itself or another creature within its reach on a success."
-														]
-													}
-												]
-											}
-										]
-									},
-									{
-										"type": "entries",
-										"entries": [
-											{
-												"type": "entries",
-												"name": "Regional Effects",
-												"entries": [
-													"The region containing Tanazir Silverquil's lair is warped by his multifaceted draconic magic, creating one or more of the following effects:",
-													{
-														"type": "list",
-														"items": [
-															"**Thickened Wilderness & Umbral Overgrowth:** Within 6 miles of the lair, forests and vegetation mutate rapidly, growing thick with thorned vines and leaves that actively absorb light. The area is permanently treated as dim light, even during a clear midday.",
-															"**Chronal Fractures:** Within 6 miles of the lair, local time becomes unstable. Time passes differently for travelers: a group might spend what feels like 1 hour traversing a forest path, only to discover that 24 hours have passed in the outside world.",
-															"**Caustic Fog & Whispering Shadows:** Within 1 mile of the lair, a light, toxic green mist blankets the ground. Beasts native to the area become highly aggressive and corrupted."
-														]
-													},
-													"If Tanazir Silverquil dies, these effects fade over the course of {@dice 1d10} days."
-												]
-											}
-										]
-									}
-								]
-							}
-						]
-					}
-				]
-			}
-		]
-	}
+	"traitTags": [
+		"Amphibious",
+		"Legendary Resistances"
+	],
+	"senseTags": [
+		"B",
+		"SD"
+	],
+	"actionTags": [
+		"Breath Weapon",
+		"Frightful Presence",
+		"Multiattack"
+	],
+	"languageTags": [
+		"C",
+		"DR",
+		"S"
+	],
+	"damageTags": [
+		"B",
+		"I",
+		"N",
+		"O",
+		"P",
+		"S"
+	],
+	"damageTagsSpell": [
+		"I",
+		"L",
+		"N",
+		"O"
+	],
+	"spellcastingTags": [
+		"O"
+	],
+	"miscTags": [
+		"AOE",
+		"MW",
+		"RCH"
+	],
+	"conditionInflict": [
+		"frightened",
+		"prone",
+		"restrained"
+	],
+	"conditionInflictSpell": [
+		"invisible",
+		"paralyzed"
+	],
+	"savingThrowForced": [
+		"constitution",
+		"dexterity",
+		"strength",
+		"wisdom"
+	],
+	"savingThrowForcedSpell": [
+		"constitution",
+		"dexterity",
+		"wisdom"
+	]
 }
