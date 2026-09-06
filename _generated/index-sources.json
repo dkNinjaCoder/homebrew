@@ -1,4 +1,3 @@
 {
-	"dkNinjaBelial": "creature/dkNinja; Belial.json",
-	"dkNinjaTanazirSilverquil": "creature/dkNinja; Tanazir Silverquil.json"
+	"PoTACampaign": "creature/dkNinja; PoTA campaign.json"
 }

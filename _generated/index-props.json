@@ -1,9 +1,8 @@
 {
 	"monster": {
-		"creature/dkNinja; Belial.json": "creature",
-		"creature/dkNinja; Tanazir Silverquil.json": "creature"
+		"creature/dkNinja; PoTA campaign.json": "creature"
 	},
 	"legendaryGroup": {
-		"creature/dkNinja; Tanazir Silverquil.json": "creature"
+		"creature/dkNinja; PoTA campaign.json": "creature"
 	}
 }

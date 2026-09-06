@@ -1,11 +1,14 @@
-# dkNinja's Homebrew
+# dkNinja's Homebrew — PoTA campaign
 
 Homebrew JSONs compatible with [5etools](https://5e.tools/).
 
 ## Contents
 
-- **`creature/dkNinja; Belial.json`**: Belial (Prince of the Covetous, Lord of Lusts) — CR 22 Fiend (Devil).
-- **`creature/dkNinja; Tanazir Silverquil.json`**: Tanazir Silverquil — CR 26 Dragon, including Mythic Phase, Lair Actions, and Regional Effects.
+- **`creature/dkNinja; PoTA campaign.json`**: Single homebrew pack (**PoTA campaign**) containing:
+  - **Belial (Prince of the Covetous, Lord of Lusts)** — CR 22 Fiend (Devil)
+  - **Tanazir Silverquil** — CR 26 Dragon, with Mythic Phase, Lair Actions, and Regional Effects
+
+Both creatures are grouped under the single source **PoTA campaign (PoTA)**.
 
 ---
 
@@ -19,22 +22,17 @@ Homebrew JSONs compatible with [5etools](https://5e.tools/).
    https://raw.githubusercontent.com/dkNinjaCoder/homebrew/master/
    ```
 4. Click **"Get Homebrew"**.
-5. Select the homebrews you want to add and click to import.
+5. Select **"PoTA campaign"** and click to add. Both creatures will be imported under the single `PoTA` source.
 
 ### Option 2: Load from URL
 1. In the 5etools **Homebrew Manager**, click **"Load from URL"**.
-2. Enter the raw URL for the creature you wish to import:
-   - **Belial**:
-     ```text
-     https://raw.githubusercontent.com/dkNinjaCoder/homebrew/master/creature/dkNinja;%20Belial.json
-     ```
-   - **Tanazir Silverquil**:
-     ```text
-     https://raw.githubusercontent.com/dkNinjaCoder/homebrew/master/creature/dkNinja;%20Tanazir%20Silverquil.json
-     ```
+2. Enter the raw URL:
+   ```text
+   https://raw.githubusercontent.com/dkNinjaCoder/homebrew/master/creature/dkNinja;%20PoTA%20campaign.json
+   ```
 
 ### Option 3: Manual File Upload
-1. Download either JSON file from the [`creature/`](creature/) directory.
+1. Download the [`creature/dkNinja; PoTA campaign.json`](creature/dkNinja;%20PoTA%20campaign.json) file.
 2. In the 5etools **Homebrew Manager**, click **"Upload File"** and select the downloaded file.
 
 ---
