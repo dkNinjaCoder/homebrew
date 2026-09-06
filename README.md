@@ -6,6 +6,7 @@ Homebrew JSONs compatible with [5etools](https://5e.tools/).
 
 - **`creature/dkNinja; PoTA campaign.json`**: Single homebrew pack (**PoTA campaign**) containing:
   - **Belial (Prince of the Covetous, Lord of Lusts)** — CR 22 Fiend (Devil)
+  - **Clarion** — CR 24 Dragon
   - **Felgolos** — CR 15 Dragon
   - **Renwick the Ascendant** — CR 21 Undead (Lich), with Lair Actions and Regional Effects
   - **Tanazir Silverquil** — CR 26 Dragon, with Mythic Phase, Lair Actions, and Regional Effects

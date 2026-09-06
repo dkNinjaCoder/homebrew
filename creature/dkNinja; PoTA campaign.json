@@ -17,7 +17,7 @@
 		],
 		"edition": "classic",
 		"dateAdded": 1725609600,
-		"dateLastModified": 1788685555
+		"dateLastModified": 1788686320
 	},
 	"monster": [
 		{
@@ -323,6 +323,321 @@
 			"savingThrowForcedSpell": [
 				"charisma",
 				"wisdom"
+			]
+		},
+		{
+			"name": "Clarion",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PoTACampaign",
+			"page": 1,
+			"size": [
+				"G"
+			],
+			"type": "dragon",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 22,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 487,
+				"formula": "25d20 + 225"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 80
+			},
+			"str": 30,
+			"dex": 10,
+			"con": 29,
+			"int": 18,
+			"wis": 18,
+			"cha": 26,
+			"save": {
+				"dex": "+7",
+				"con": "+16",
+				"wis": "+11",
+				"cha": "+15"
+			},
+			"skill": {
+				"arcana": "+11",
+				"history": "+11",
+				"insight": "+11",
+				"perception": "+18",
+				"religion": "+11"
+			},
+			"senses": [
+				"blindsight 60 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 28,
+			"resist": [
+				"radiant"
+			],
+			"immune": [
+				"cold"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Celestial",
+				"Common",
+				"Draconic"
+			],
+			"cr": "24",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Clarion is a 15th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 23}, {@hit 15} to hit with spell attacks). Clarion has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance}",
+								"{@spell light}",
+								"{@spell sacred flame}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bless}",
+								"{@spell cure wounds}",
+								"{@spell sanctuary}",
+								"{@spell shield of faith}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell calm emotions}",
+								"{@spell lesser restoration}",
+								"{@spell zone of truth}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell beacon of hope}",
+								"{@spell daylight}",
+								"{@spell dispel magic}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell death ward}",
+								"{@spell guardian of faith}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell greater restoration}",
+								"{@spell hallow}",
+								"{@spell holy weapon}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell heal}",
+								"{@spell true seeing}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell divine word}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Heavenly Valor",
+					"entries": [
+						"Friendly creatures within 30 feet of Clarion have advantage on saving throws against being {@condition charmed} or {@condition frightened}. Additionally, when a friendly creature in the aura deals damage with a weapon attack, it deals an extra 4 ({@damage 1d8}) radiant damage."
+					]
+				},
+				{
+					"name": "Clarion's Radiance",
+					"entries": [
+						"When Clarion takes damage from a creature within 60 feet of him, he can emit a flash of blinding light; the attacker must succeed on a {@dc 23} Constitution saving throw or be {@condition blinded} until the end of its next turn."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"If Clarion fails a saving throw, he can choose to succeed instead."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Clarion can use his Frightful Presence. He then makes three attacks: one with his bite and two with his claws."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 17} to hit, reach 15 ft., one target. {@h}21 ({@damage 2d10 + 10}) piercing damage plus 9 ({@damage 2d8}) radiant damage."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 17} to hit, reach 10 ft., one target. {@h}17 ({@damage 2d6 + 10}) slashing damage."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 17} to hit, reach 20 ft., one target. {@h}19 ({@damage 2d8 + 10}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Frightful Presence",
+					"entries": [
+						"Each creature of Clarion's choice that is within 120 feet of him and aware of him must succeed on a {@dc 23} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to Clarion's Frightful Presence for the next 24 hours."
+					]
+				},
+				{
+					"name": "Breath Weapons {@recharge 5}",
+					"entries": [
+						"Clarion uses one of the following breath weapons:",
+						{
+							"type": "list",
+							"items": [
+								"{@b Celestial Cold Breath.} Clarion exhales a blast of silvery, celestial frost in a 90-foot cone. Each creature in that area must make a {@dc 24} Constitution saving throw, taking 58 ({@damage 13d8}) cold damage and 18 ({@damage 4d8}) radiant damage on a failed save, or half as much damage on a successful one. Evil creatures have disadvantage on this saving throw.",
+								"{@b Paralyzing Breath.} Clarion exhales paralyzing gas in a 90-foot cone. Each creature in that area must succeed on a {@dc 24} Constitution saving throw or be {@condition paralyzed} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+							]
+						}
+					]
+				},
+				{
+					"name": "Ward of the Heavens (2/Day)",
+					"entries": [
+						"Clarion touches a willing creature with his claw or snout. The target gains 30 temporary hit points, and for 1 minute, it gains a +2 bonus to AC and resistance to radiant and necrotic damage."
+					]
+				},
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Clarion magically polymorphs into a humanoid or beast that has a challenge rating no higher than his own, or back into his true form. He reverts to his true form if he dies. Any equipment he is wearing or carrying is absorbed or borne by the new form (Clarion's choice).",
+						"In a new form, Clarion retains his alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. His statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Aegis of the Silver Dragon",
+					"entries": [
+						"When a creature Clarion can see within 30 feet of him is targeted by an attack roll, Clarion can flash with blinding silver radiance, imposing disadvantage on the attack roll. If the attack misses, the attacker takes 9 ({@damage 2d8}) radiant damage."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Detect",
+					"entries": [
+						"Clarion makes a Wisdom ({@skill Perception}) check."
+					]
+				},
+				{
+					"name": "Tail Attack",
+					"entries": [
+						"Clarion makes a tail attack."
+					]
+				},
+				{
+					"name": "Silver Shield",
+					"entries": [
+						"Clarion projects a protective barrier around an ally he can see within 60 feet. That ally gains a +3 bonus to AC until the start of Clarion's next turn."
+					]
+				},
+				{
+					"name": "Celestial Flash (Costs 2 Actions)",
+					"entries": [
+						"Clarion emits a blinding silver light. Each non-good creature within 30 feet of Clarion must succeed on a {@dc 23} Dexterity saving throw or take 14 ({@damage 3d4 + 7}) radiant damage and be {@condition blinded} until the end of Clarion's next turn."
+					]
+				},
+				{
+					"name": "Wing Attack (Costs 2 Actions)",
+					"entries": [
+						"Clarion beats his wings. Each creature within 15 feet of Clarion must succeed on a {@dc 25} Dexterity saving throw or take 17 ({@damage 2d6 + 10}) bludgeoning damage and be knocked {@condition prone}. Clarion can then fly up to half his flying speed."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Breath Weapon"
+			],
+			"languageTags": [
+				"CE",
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"P",
+				"R",
+				"S"
+			],
+			"damageTagsLegendary": [
+				"B",
+				"R"
+			],
+			"spellcastingTags": [
+				"CL"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"frightened",
+				"paralyzed",
+				"prone"
+			],
+			"conditionInflictLegendary": [
+				"blinded",
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"savingThrowForcedLegendary": [
+				"dexterity"
 			]
 		},
 		{
