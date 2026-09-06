@@ -17,7 +17,7 @@
 		],
 		"edition": "classic",
 		"dateAdded": 1725609600,
-		"dateLastModified": 1788684212
+		"dateLastModified": 1788685555
 	},
 	"monster": [
 		{
@@ -598,6 +598,330 @@
 			]
 		},
 		{
+			"name": "Renwick the Ascendant",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PoTACampaign",
+			"page": 1,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"lich"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 187,
+				"formula": "22d8 + 88"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 18,
+			"int": 22,
+			"wis": 16,
+			"cha": 16,
+			"save": {
+				"con": "+11",
+				"int": "+13",
+				"wis": "+10",
+				"cha": "+10"
+			},
+			"skill": {
+				"arcana": "+20",
+				"history": "+13",
+				"insight": "+10",
+				"perception": "+10"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 20,
+			"resist": [
+				"cold",
+				"lightning",
+				"necrotic"
+			],
+			"immune": [
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"Abyssal",
+				"Celestial",
+				"Common",
+				"Draconic",
+				"Infernal"
+			],
+			"cr": "21",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Renwick is an 18th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 21}, {@hit 13} to hit with spell attacks). Renwick has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell mage hand}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell magic missile}",
+								"{@spell shield}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell detect thoughts}",
+								"{@spell invisibility}",
+								"{@spell mirror image}",
+								"{@spell misty step}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell dispel magic}",
+								"{@spell fireball}",
+								"{@spell fly}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell dimension door}",
+								"{@spell fire shield}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell cone of cold}",
+								"{@spell scrying}",
+								"{@spell wall of force}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell chain lightning}",
+								"{@spell globe of invulnerability}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell forcecage}",
+								"{@spell plane shift}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell demiplane}",
+								"{@spell maze}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell time stop}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"If Renwick fails a saving throw, he can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Archlich Rejuvenation",
+					"entries": [
+						"If Renwick is destroyed, he gains a new body in {@dice 1d10} days, regaining all his hit points and becoming active again. The new body appears within 5 feet of Renwick's phylactery, safely secured within his warded planar sanctum."
+					]
+				},
+				{
+					"name": "Planar Geometries & Conduit Mastery",
+					"entries": [
+						"Renwick's spells and magical attacks ignore resistance to fire and force damage. In addition, Renwick has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Turn Immunity",
+					"entries": [
+						"Renwick is immune to effects that turn undead."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Paralyzing Touch",
+					"entries": [
+						"{@atk ms} {@hit 13} to hit, reach 5 ft., one creature. {@h}10 ({@damage 3d6}) cold damage plus 10 ({@damage 3d6}) necrotic damage. The target must succeed on a {@dc 21} Constitution saving throw or be {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				},
+				{
+					"name": "Cinder Flare {@recharge 5}",
+					"entries": [
+						"Renwick vents raw planar hellfire and infernal cinders from his conduits in a 60-foot cone. Each creature in that area must make a {@dc 21} Dexterity saving throw, taking 35 ({@damage 10d6}) fire damage and 21 ({@damage 6d6}) force damage on a failed save, or half as much on a successful one."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cantrip",
+					"entries": [
+						"Renwick casts a cantrip."
+					]
+				},
+				{
+					"name": "Spatial Shift",
+					"entries": [
+						"Renwick magically teleports up to 30 feet to an unoccupied space he can see, along with any equipment he is wearing or carrying."
+					]
+				},
+				{
+					"name": "Paralyzing Touch (Costs 2 Actions)",
+					"entries": [
+						"Renwick uses his Paralyzing Touch."
+					]
+				},
+				{
+					"name": "Frightening Gaze (Costs 2 Actions)",
+					"entries": [
+						"Renwick fixes his gaze on one creature he can see within 10 feet of him. The target must succeed on a {@dc 21} Wisdom saving throw against this magic or become {@condition frightened} for 1 minute. The {@condition frightened} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to Renwick's gaze for the next 24 hours."
+					]
+				},
+				{
+					"name": "Disrupt Life (Costs 3 Actions)",
+					"entries": [
+						"Each non-undead creature within 20 feet of Renwick must make a {@dc 21} Constitution saving throw against this magic, taking 28 ({@damage 8d6}) necrotic damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Renwick the Ascendant",
+				"source": "PoTACampaign"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Rejuvenation",
+				"Turn Immunity"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Frightful Presence",
+				"Teleport"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"CE",
+				"DR",
+				"I"
+			],
+			"damageTags": [
+				"C",
+				"F",
+				"N",
+				"O"
+			],
+			"damageTagsLegendary": [
+				"N"
+			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"L",
+				"O",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"AOE",
+				"MA"
+			],
+			"conditionInflict": [
+				"frightened",
+				"paralyzed"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"wisdom"
+			]
+		},
+		{
 			"name": "Tanazir Silverquil",
 			"isNamedCreature": true,
 			"source": "PoTACampaign",
@@ -906,6 +1230,35 @@
 		}
 	],
 	"legendaryGroup": [
+		{
+			"name": "Renwick the Ascendant",
+			"source": "PoTACampaign",
+			"page": 1,
+			"lairActions": [
+				"Renwick's personal sanctum—whether nested within the ancient passages beneath Summit Hall or suspended aboard a rebuilt shard of Baator's floating citadel—is warded by shifting infernal geometries, tournament cinder conduits, and ancient Misque glyph arrays.",
+				"On initiative count 20 (losing initiative ties), Renwick takes a lair action to cause one of the following effects; Renwick can't use the same effect two rounds in a row:",
+				{
+					"type": "list",
+					"items": [
+						"Renwick commands the citadel's shifting geometries. Up to three 10-foot cubes of solid stone or iron within 120 feet of him rearrange, phase out, or seal shut, opening new pathways or sealing existing corridors. Any creature caught inside a newly formed barrier must make a {@dc 21} Dexterity saving throw; on a failed save, it takes 22 ({@damage 4d10}) force damage and is shunted to the nearest unoccupied space, or half damage and safely moved on a success.",
+						"Renwick triggers a primary floor rune of Misque at a point he can see within 90 feet. A 20-foot-radius glowing glyph flares on the ground until initiative count 20 on the next round. While in the area, hostile creatures cannot cast spells of 3rd level or lower, and any creature attempting to cast a spell of 4th level or higher must succeed on a {@dc 21} Intelligence saving throw or the spell slot is consumed with no effect.",
+						"Searing flames vent from floor grates and planar conduit seams across the lair. Magma and hellfire erupt in two 10-foot-radius, 30-foot-high cylinders centered on points Renwick chooses within 120 feet. Each creature in those areas must make a {@dc 21} Dexterity saving throw, taking 21 ({@damage 6d6}) fire damage and 14 ({@damage 4d6}) necrotic damage on a failed save, or half as much on a successful one. Flammable objects in the area ignite."
+					]
+				}
+			],
+			"regionalEffects": [
+				"The region containing Renwick's sanctum or floating citadel is warped by his planar research and arcane wards, creating the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"Divination spells of 7th level or lower cast by creatures outside the lair cannot penetrate within 3 miles of the sanctum, and magical scrying sensors fail to manifest within this boundary. The citadel and its grounds are completely invisible to aerial observers flying more than 500 feet above it.",
+						"Inscribed stones, ancient archways, and structural ruins within 1 mile of the lair pulse with faint violet light whenever magical spells are cast nearby. Non-evil spellcasters who complete a short or long rest in this area find their spell foci humming with static, granting them a +1 bonus to their next spell save DC within 24 hours.",
+						"Air within 1 mile of the lair is dry and carries the faint smell of brimstone, embers, and heated iron. Water sources evaporate twice as fast, and small illusions of swirling embers drift harmlessly through dark corridors."
+					]
+				},
+				"If Renwick is destroyed, the regional effects fade over the course of {@dice 1d10} days."
+			]
+		},
 		{
 			"name": "Tanazir Silverquil",
 			"source": "PoTACampaign",
