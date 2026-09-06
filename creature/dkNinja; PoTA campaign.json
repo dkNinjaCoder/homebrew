@@ -17,7 +17,7 @@
 		],
 		"edition": "classic",
 		"dateAdded": 1725609600,
-		"dateLastModified": 1788709705
+		"dateLastModified": 1788714538
 	},
 	"monster": [
 		{
@@ -121,9 +121,9 @@
 					}
 				],
 				"entries": [
-					"Belial is a 10-foot-tall handsome humanoid with chalky skin and reddish-brown hair and beard. Rams horns curling from his wide brow flicker with hellfire. Charred wings sprout from the fiend’s back, revealing the last vestiges of his once angelic form.",
+					"Belial is a 10-foot-tall handsome humanoid with chalky skin and reddish-brown hair and beard. Rams horns curling from his wide brow flicker with hellfire. Charred wings sprout from the fiend's back, revealing the last vestiges of his once angelic form.",
 					"Belial is the most capricious and chaotic of the princes of darkness, leaving many among the courts of Hell to wonder if he has not been fully corrupted by demonic influences. Belial, more than others has made pacts with demons, and dark gods of the Underworld. He is always on the hunt for portals that allow him greater time and access to the mortal realms.",
-					"Belial’s lair is found in the storm-thundered Hell Ring of Covetous where the lightning-wracked skies flock with harpies, night hags, succubi, and erinyes. Belial’s legions throng with his many progeny, themselves brutal combatants who use complex asymmetrical tactics to finish off foes who often greatly outnumber them."
+					"Belial's lair is found in the storm-thundered Hell Ring of Covetous where the lightning-wracked skies flock with harpies, night hags, succubi, and erinyes. Belial's legions throng with his many progeny, themselves brutal combatants who use complex asymmetrical tactics to finish off foes who often greatly outnumber them."
 				]
 			},
 			"shortName": "Belial",
@@ -203,7 +203,7 @@
 				{
 					"name": "Devil's Sight",
 					"entries": [
-						"Magical darkness doesn’t impede the devil’s darkvision"
+						"Magical darkness doesn't impede the devil's darkvision"
 					]
 				},
 				{
@@ -243,7 +243,7 @@
 				{
 					"name": "Innate Spellcasting",
 					"headerEntries": [
-						"Belial’s innate spellcasting ability is Charisma (spell save {@dc 24}, +16 to hit with spell attacks). He can cast the following spells, requiring no material components:"
+						"Belial's innate spellcasting ability is Charisma (spell save {@dc 24}, +16 to hit with spell attacks). He can cast the following spells, requiring no material components:"
 					],
 					"will": [
 						"{@spell bane}",
@@ -334,6 +334,352 @@
 				"charisma",
 				"wisdom"
 			]
+		},
+		{
+			"name": "Chimeric Abomination",
+			"source": "PoTACampaign",
+			"page": 1,
+			"size": [
+				"H"
+			],
+			"type": "aberration",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 310,
+				"formula": "23d12 + 161"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 25,
+			"dex": 11,
+			"con": 25,
+			"int": 6,
+			"wis": 13,
+			"cha": 14,
+			"save": {
+				"str": "+13",
+				"con": "+13",
+				"wis": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 11,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				},
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"understands Deep Speech and Undercommon but can't speak"
+			],
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Charge",
+					"entries": [
+						"If the abomination moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 38 ({@damage 7d10}) piercing damage. If the target is a creature, it must succeed on a {@dc 21} Strength saving throw or be knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Labyrinthine Recall",
+					"entries": [
+						"The abomination can perfectly recall any path it has traveled."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The abomination has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"The abomination deals double damage to objects and structures."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The abomination makes three attacks: two with its fists and one with its fanged hoof. Alternatively, it replaces its fist attacks with one Chimeric Lash attack."
+					]
+				},
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 13} to hit, reach 10 ft., one target. {@h}45 ({@damage 7d10 + 7}) piercing damage."
+					]
+				},
+				{
+					"name": "Fist",
+					"entries": [
+						"{@atk mw} {@hit 13} to hit, reach 10 ft., one target. {@h}20 ({@damage 3d8 + 7}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Fanged Hoof",
+					"entries": [
+						"{@atk mw} {@hit 13} to hit, reach 5 ft., one {@condition prone} target. {@h}29 ({@damage 5d8 + 7}) slashing damage."
+					]
+				},
+				{
+					"name": "Chimeric Lash",
+					"entries": [
+						"{@atk mw} {@hit 13} to hit, reach 15 ft., up to three targets within 5 feet of each other. {@h}18 ({@damage 2d10 + 7}) bludgeoning damage plus 9 ({@damage 2d8}) psychic damage, and a target must succeed on a {@dc 21} Strength saving throw or be pulled up to 10 feet toward the abomination."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Synaptic Retaliation",
+					"entries": [
+						"When a creature within 60 feet of the abomination hits it with an attack that deals psychic damage or attempts to target it with a spell that requires an Intelligence saving throw, the abomination flashes a burst of psychic feedback. The triggering creature must succeed on a {@dc 16} Intelligence saving throw or take 18 ({@damage 4d8}) psychic damage and have disadvantage on its next attack roll before the end of its next turn."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS",
+				"U",
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"intelligence",
+				"strength"
+			]
+		},
+		{
+			"name": "Chimeric Elder Brain",
+			"source": "PoTACampaign",
+			"page": 1,
+			"size": [
+				"H"
+			],
+			"type": "aberration",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor",
+						"hardened scales"
+					]
+				}
+			],
+			"hp": {
+				"average": 285,
+				"formula": "30d12 + 90"
+			},
+			"speed": {
+				"walk": 5,
+				"swim": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 20,
+			"dex": 12,
+			"con": 16,
+			"int": 22,
+			"wis": 19,
+			"cha": 20,
+			"save": {
+				"con": "+9",
+				"int": "+12",
+				"wis": "+10"
+			},
+			"skill": {
+				"arcana": "+12",
+				"insight": "+10",
+				"perception": "+10"
+			},
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 20,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"telepathy 5 miles"
+			],
+			"cr": "18",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"If the brain fails a saving throw, it can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The brain has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Primal Surge",
+					"entries": [
+						"Due to its beast sacrifices, the brain's physical attacks deal magical damage and ignore resistances to bludgeoning, piercing, and slashing damage."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The brain makes three attacks: one with its Fanged Maw and two with its Chimeric Tentacles."
+					]
+				},
+				{
+					"name": "Fanged Maw",
+					"entries": [
+						"{@atk mw} {@hit 11} to hit, reach 10 ft., one target. {@h}22 ({@damage 3d10 + 5}) piercing damage plus 14 ({@damage 4d6}) psychic damage."
+					]
+				},
+				{
+					"name": "Chimeric Tentacles",
+					"entries": [
+						"{@atk mw} {@hit 11} to hit, reach 20 ft., one target. {@h}16 ({@damage 2d10 + 5}) bludgeoning damage. If the target is a Huge or smaller creature, it is {@condition grappled} (escape {@dc 19})."
+					]
+				},
+				{
+					"name": "Mind Blast {@recharge 5}",
+					"entries": [
+						"The brain magically emits psionic energy in a 60-foot cone. Each creature in that area must succeed on a {@dc 20} Intelligence saving throw or take 45 ({@damage 10d8}) psychic damage and be {@condition stunned} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Tentacle Strike / Flail",
+					"entries": [
+						"The brain makes one Chimeric Tentacle attack or attempts to slam a {@condition grappled} creature into the ground (dealing 16 bludgeoning damage and knocking them {@condition prone})."
+					]
+				},
+				{
+					"name": "Psionic Pulse (Costs 2 Actions)",
+					"entries": [
+						"The brain emits a wave of psychic pressure. Each creature within 30 feet of it must succeed on a {@dc 20} Strength saving throw or be pushed 20 feet away from the pool and knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Primal Scream (Costs 3 Actions)",
+					"entries": [
+						"The brain unleashes a horrific, echoing roar directly into the minds of its enemies. Every creature within 60 feet must make a {@dc 20} Wisdom saving throw or become {@condition frightened} of the brain for 1 minute."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Chimeric Elder Brain",
+				"source": "PoTACampaign"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened",
+				"grappled",
+				"prone",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"intelligence",
+				"strength",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"fluff": {
+				"entries": [
+					"The Chimeric Elder Brain dwells suspended over a massive vat of ceremorphosis brine, biologically warped with apex predator tissue."
+				]
+			}
 		},
 		{
 			"name": "Clarion",
@@ -1708,6 +2054,159 @@
 			]
 		},
 		{
+			"name": "Mind Flayer Assassin",
+			"source": "PoTACampaign",
+			"page": 1,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item breastplate|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 84,
+				"formula": "13d8 + 26"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 14,
+			"int": 19,
+			"wis": 17,
+			"cha": 17,
+			"save": {
+				"dex": "+6",
+				"int": "+7",
+				"wis": "+6",
+				"cha": "+6"
+			},
+			"skill": {
+				"arcana": "+7",
+				"deception": "+6",
+				"insight": "+6",
+				"perception": "+6",
+				"persuasion": "+6",
+				"stealth": "+9"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"languages": [
+				"Deep Speech",
+				"Undercommon",
+				"telepathy 120 ft."
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The mind flayer's innate spellcasting ability is Intelligence (spell save {@dc 15}). It can innately cast the following spells, requiring no components:"
+					],
+					"will": [
+						"{@spell detect thoughts}",
+						"{@spell levitate}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell dominate monster}",
+							"{@spell plane shift||plane shift (self only)}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Ambusher",
+					"entries": [
+						"The mind flayer has advantage on attack rolls against any creature it has surprised."
+					]
+				},
+				{
+					"name": "Assassinate",
+					"entries": [
+						"During its first turn, the mind flayer has advantage on attack rolls against any creature that hasn't taken a turn. Any hit the mind flayer scores against a surprised creature is a critical hit."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The mind flayer has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"The mind flayer deals an extra 14 ({@damage 4d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the mind flayer that isn't {@condition incapacitated} and the mind flayer doesn't have disadvantage on the attack roll."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Tentacles",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}15 ({@damage 2d10 + 4}) psychic damage. If the target is Medium or smaller, it is {@condition grappled} (escape {@dc 15}) and must succeed on a {@dc 15} Intelligence saving throw or be {@condition stunned} until this grapple ends."
+					]
+				},
+				{
+					"name": "Extract Brain",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one {@condition incapacitated} humanoid {@condition grappled} by the mind flayer. {@h}55 ({@damage 10d10}) piercing damage. If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain."
+					]
+				},
+				{
+					"name": "Mind Blast {@recharge 5}",
+					"entries": [
+						"The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a {@dc 15} Intelligence saving throw or take 22 ({@damage 4d8 + 4}) psychic damage and be {@condition stunned} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"DS",
+				"U",
+				"TP"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			]
+		},
+		{
 			"name": "Renwick the Ascendant",
 			"isNpc": true,
 			"isNamedCreature": true,
@@ -2436,61 +2935,155 @@
 			"hasFluffImages": false,
 			"fluff": {
 				"entries": [
-					{
-						"type": "entries",
-						"entries": [
-							{
-								"type": "entries",
-								"name": "Tanazir Silverquil's Lair",
-								"entries": [
-									"Tanazir rules from a fractured temporal hub deep within a twilight-choked primordial swamp where past, present, and future violently collide.",
-									{
-										"type": "entries",
-										"entries": [
-											{
-												"type": "entries",
-												"name": "Lair Actions",
-												"entries": [
-													"On initiative count 20 (losing initiative ties), Tanazir takes a lair action to cause one of the following effects; Tanazir can't use the same effect two rounds in a row:",
-													{
-														"type": "list",
-														"items": [
-															"**Chronal Echoes.** Tanazir manipulates the timestream of the lair, forcing the echoes of past and future moments to collide. Up to three creatures Tanazir can see within 120 feet must succeed on a {@dc 22} Wisdom saving throw or be affected by a temporal duplicate. Until initiative count 20 on the next round, whenever an affected target takes an action, moves, or casts a spell, it must immediately roll a {@dice d6}. On a 1–3, the action or movement is delayed and fails to resolve until the very end of the current turn.",
-															"**Umbral Fog.** A cloud of thick, caustic, shadow-infused green gas fills a 20-foot-radius sphere centered on a point Tanazir can see within 120 feet. The fog spreads around corners, and its area is heavily obscured. Each creature that starts its turn in the fog or enters it for the first time on a turn must make a {@dc 22} Constitution saving throw, taking 28 ({@damage 8d6}) poison damage and 14 ({@damage 4d6}) necrotic damage on a failed save, or half as much on a success. The fog lasts until initiative count 20 on the next round.",
-															"**Grasping Timelines.** Tendrils of dark, vine-like shadows erupt from the floor, walls, and ceiling in a 40-foot radius centered on a point Tanazir chooses within 90 feet. Each creature in that area must succeed on a {@dc 22} Strength saving throw or be {@condition restrained} by the paradoxical timeline fragments. A creature can use its action to make a {@dc 22} Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check, freeing itself or another creature within its reach on a success. The vines disappear on initiative count 20 of the next round."
-														]
-													}
-												]
-											},
-											{
-												"type": "entries",
-												"entries": [
-													{
-														"type": "entries",
-														"name": "Regional Effects",
-														"entries": [
-															"The region containing Tanazir Silverquil's lair is warped by his multifaceted draconic magic, which creates one or more of the following effects:",
-															{
-																"type": "list",
-																"items": [
-																	"**Thickened Wilderness & Umbral Overgrowth.** Within 6 miles of the lair, forests and vegetation mutate rapidly, growing thick with thorned vines and leaves that actively absorb light. The area is permanently treated as dim light, even during a clear midday. Furthermore, any check made to track a creature or navigate through this region has disadvantage due to the shifting undergrowth.",
-																	"**Chronal Fractures.** Within 6 miles of the lair, local time becomes unstable. Time passes differently for travelers: a group might spend what feels like 1 hour traversing a forest path, only to discover that 24 hours have passed in the outside world. Clocks, sundials, and magical time-tracking items spin wildly or freeze completely.",
-																	"**Caustic Fog & Whispering Shadows.** Within 1 mile of the lair, a light, toxic green mist blankets the ground. Beasts native to the area become aggressive and corrupted, possessing glowing emerald eyes and shadows that seem detached from their physical bodies. Creatures resting within this area hear faint, overlapping echoes of their own past and future conversations whispering from the fog."
-																]
-															},
-															"If Tanazir Silverquil dies, these effects fade over the course of {@dice 1d10} days."
-														]
-													}
-												]
-											}
-										]
-									}
-								]
-							}
-						]
-					}
+					"Tanazir rules from a fractured temporal hub deep within a twilight-choked primordial swamp where past, present, and future violently collide."
 				]
 			}
+		},
+		{
+			"name": "Ulitharid",
+			"source": "PoTACampaign",
+			"page": 175,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item breastplate|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 127,
+				"formula": "17d10 + 34"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 15,
+			"int": 21,
+			"wis": 19,
+			"cha": 21,
+			"save": {
+				"int": "+9",
+				"wis": "+8",
+				"cha": "+9"
+			},
+			"skill": {
+				"arcana": "+9",
+				"insight": "+8",
+				"perception": "+8",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 18,
+			"languages": [
+				"Deep Speech",
+				"Undercommon",
+				"telepathy 2 miles"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The ulitharid's innate spellcasting ability is Intelligence (spell save {@dc 17}). It can innately cast the following spells, requiring no components:"
+					],
+					"will": [
+						"{@spell detect thoughts}",
+						"{@spell levitate}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell confusion}",
+							"{@spell dominate monster}",
+							"{@spell eyebite}",
+							"{@spell feeblemind}",
+							"{@spell mass suggestion}",
+							"{@spell plane shift||plane shift (self only)}",
+							"{@spell project image}",
+							"{@spell scrying}",
+							"{@spell telekinesis}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Creature Sense",
+					"entries": [
+						"The ulitharid is aware of the presence of creatures within 2 miles of it that have an Intelligence score of 4 or higher. It knows the distance and direction to each creature, as well as each creature's Intelligence score, but can't sense anything else about it. A creature protected by a {@spell mind blank} spell, a {@spell nondetection} spell, or similar magic can't be perceived in this manner."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The ulitharid has advantage on saving throws against spells and other magical effects."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Tentacles",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 10 ft., one creature. {@h}27 ({@damage 4d10 + 5}) psychic damage. If the target is Large or smaller, it is {@condition grappled} (escape {@dc 14}) and must succeed on a {@dc 17} Intelligence saving throw or be {@condition stunned} until this grapple ends."
+					]
+				},
+				{
+					"name": "Extract Brain",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one {@condition incapacitated} humanoid {@condition grappled} by the ulitharid. {@h}55 ({@damage 10d10}) piercing damage. If this damage reduces the target to 0 hit points, the ulitharid kills the target by extracting and devouring its brain."
+					]
+				},
+				{
+					"name": "Mind Blast {@recharge 5}",
+					"entries": [
+						"The ulitharid magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a {@dc 17} Intelligence saving throw or take 31 ({@damage 4d12 + 5}) psychic damage and be {@condition stunned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"DS",
+				"U",
+				"TP"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			]
 		},
 		{
 			"name": "Wairi Silvermoustache, Exalted High Marshal",
@@ -2842,6 +3435,33 @@
 	],
 	"legendaryGroup": [
 		{
+			"name": "Chimeric Elder Brain",
+			"source": "PoTACampaign",
+			"page": 1,
+			"lairActions": [
+				"The Chimeric Elder Brain dwells suspended over a massive vat of ceremorphosis brine, biologically warped with apex predator tissue.",
+				"On initiative count 20 (losing initiative ties), the Chimeric Elder Brain takes a lair action to cause one of the following effects; the brain can't use the same effect two rounds in a row:",
+				{
+					"type": "list",
+					"items": [
+						"Fleshy tendrils sprout from the laboratory walls. Up to three creatures the brain can see within 60 feet must succeed on a {@dc 18} Strength saving throw or be {@condition restrained} until initiative count 20 on the next round.",
+						"The purple ceremorphosis fluid in the pool surges with static. Each creature standing in or within 10 feet of the brine pool must make a {@dc 18} Intelligence saving throw, taking 18 ({@damage 4d8}) psychic damage on a failure, or half as much on a success."
+					]
+				}
+			],
+			"regionalEffects": [
+				"The region containing the Chimeric Elder Brain's lair is warped by mutated thoughts and psychic resonance, creating one or more of the following effects:",
+				{
+					"type": "list",
+					"items": [
+						"Beasts within 5 miles of the lair display eerie, humanlike intelligence and territorial aggression, grouping into uncharacteristic hunting packs.",
+						"Humanoids traveling within 1 mile of the lair experience vivid, waking hallucinations of flesh grafting and echoes of primal animal screams."
+					]
+				},
+				"If the Chimeric Elder Brain dies, these effects fade over the course of {@dice 1d10} days."
+			]
+		},
+		{
 			"name": "Renwick the Ascendant",
 			"source": "PoTACampaign",
 			"page": 1,
@@ -2879,19 +3499,19 @@
 				{
 					"type": "list",
 					"items": [
-						"**Chronal Echoes.** Tanazir manipulates the timestream of the lair, forcing the echoes of past and future moments to collide. Up to three creatures Tanazir can see within 120 feet must succeed on a {@dc 22} Wisdom saving throw or be affected by a temporal duplicate. Until initiative count 20 on the next round, whenever an affected target takes an action, moves, or casts a spell, it must immediately roll a {@dice d6}. On a 1-3, the action or movement is delayed and fails to resolve until the very end of the current turn (wasting the tactical timing of spells or movement).",
+						"**Chronal Echoes.** Tanazir manipulates the timestream of the lair, forcing the echoes of past and future moments to collide. Up to three creatures Tanazir can see within 120 feet must succeed on a {@dc 22} Wisdom saving throw or be affected by a temporal duplicate. Until initiative count 20 on the next round, whenever an affected target takes an action, moves, or casts a spell, it must immediately roll a {@dice d6}. On a 1–3, the action or movement is delayed and fails to resolve until the very end of the current turn.",
 						"**Umbral Fog.** A cloud of thick, caustic, shadow-infused green gas fills a 20-foot-radius sphere centered on a point Tanazir can see within 120 feet. The fog spreads around corners, and its area is heavily obscured. Each creature that starts its turn in the fog or enters it for the first time on a turn must make a {@dc 22} Constitution saving throw, taking 28 ({@damage 8d6}) poison damage and 14 ({@damage 4d6}) necrotic damage on a failed save, or half as much on a success. The fog lasts until initiative count 20 on the next round.",
 						"**Grasping Timelines.** Tendrils of dark, vine-like shadows erupt from the floor, walls, and ceiling in a 40-foot radius centered on a point Tanazir chooses within 90 feet. Each creature in that area must succeed on a {@dc 22} Strength saving throw or be {@condition restrained} by the paradoxical timeline fragments. A creature can use its action to make a {@dc 22} Strength ({@skill Athletics}) or Dexterity ({@skill Acrobatics}) check, freeing itself or another creature within its reach on a success. The vines disappear on initiative count 20 of the next round."
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing Tanazir Silverquil's lair is warped by his multifaceted draconic magic, creating one or more of the following effects:",
+				"The region containing Tanazir Silverquil's lair is warped by his multifaceted draconic magic, which creates one or more of the following effects:",
 				{
 					"type": "list",
 					"items": [
 						"**Thickened Wilderness & Umbral Overgrowth.** Within 6 miles of the lair, forests and vegetation mutate rapidly, growing thick with thorned vines and leaves that actively absorb light. The area is permanently treated as dim light, even during a clear midday. Furthermore, any check made to track a creature or navigate through this region has disadvantage due to the shifting undergrowth.",
-						"**Chronal Fractures.** Within 6 miles of the lair, local time becomes unstable. Time passes differently for travelers: a group might spend what feels like 1 hour traversing a forest path, only to discover that 24 hours have passed in the outside world (or vice versa). Clocks, sundials, and magical time-tracking items spin wildly or freeze completely.",
+						"**Chronal Fractures.** Within 6 miles of the lair, local time becomes unstable. Time passes differently for travelers: a group might spend what feels like 1 hour traversing a forest path, only to discover that 24 hours have passed in the outside world. Clocks, sundials, and magical time-tracking items spin wildly or freeze completely.",
 						"**Caustic Fog & Whispering Shadows.** Within 1 mile of the lair, a light, toxic green mist blankets the ground. Beasts native to the area become aggressive and corrupted, possessing glowing emerald eyes and shadows that seem detached from their physical bodies. Creatures resting within this area hear faint, overlapping echoes of their own past and future conversations whispering from the fog."
 					]
 				},

@@ -6,12 +6,16 @@ Homebrew JSONs compatible with [5etools](https://5e.tools/).
 
 - **`creature/dkNinja; PoTA campaign.json`**: Single homebrew pack (**PoTA campaign**) containing:
   - **Belial (Prince of the Covetous, Lord of Lusts)** — CR 22 Fiend (Devil)
+  - **Chimeric Abomination** — CR 17 Aberration
+  - **Chimeric Elder Brain** — CR 18 Aberration, with Lair Actions and Regional Effects
   - **Clarion** — CR 24 Dragon
   - **Felgolos** — CR 15 Dragon
   - **Ghesh Mageddon, the Undying Dread** — CR 22 Undead (Dragonborn)
   - **Lee (Laileb), Scion of Phlegethos** — CR 24 Fiend (Tiefling)
+  - **Mind Flayer Assassin** — CR 8 Aberration
   - **Renwick the Ascendant** — CR 21 Undead (Lich), with Lair Actions and Regional Effects
   - **Tanazir Silverquil** — CR 26 Dragon, with Mythic Phase, Lair Actions, and Regional Effects
+  - **Ulitharid** — CR 9 Aberration
   - **Wairi Silvermoustache, Exalted High Marshal** — CR 22 Humanoid (Dwarf)
 
 All creatures are grouped under the single source **PoTA campaign (PoTA)**.

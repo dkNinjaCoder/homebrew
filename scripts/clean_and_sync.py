@@ -55,6 +55,14 @@ TEXT_REPLACEMENTS = [
 	(re.compile(r"\bStrength \(Athletics\)"), r"Strength ({@skill Athletics})"),
 	(re.compile(r"\bDexterity \(Acrobatics\)"), r"Dexterity ({@skill Acrobatics})"),
 	(re.compile(r"\bWisdom \(Perception\)"), r"Wisdom ({@skill Perception})"),
+	# Untagged common conditions
+	(re.compile(r"\bone incapacitated humanoid\b"), r"one {@condition incapacitated} humanoid"),
+	(re.compile(r"\bthat isn't incapacitated\b"), r"that isn't {@condition incapacitated}"),
+	(re.compile(r"\ba grappled creature\b"), r"a {@condition grappled} creature"),
+	# Attack damage hit text normalization
+	(re.compile(r"\{@h\}The target takes\s+"), r"{@h}"),
+	# Contraction / possessive curly apostrophes
+	(re.compile(r"(\w)’(\w)"), r"\1'\2"),
 ]
 
 # Regex replacements applied to 'name' keys (actions, traits, bonus, reactions)
@@ -107,6 +115,81 @@ def walk_and_clean(obj, parent_key: str = None):
 # ==============================================================================
 # Modular Fixer Functions
 # ==============================================================================
+
+def extract_lair_and_regional_from_fluff(data: dict) -> int:
+	"""
+	If lairActions or regionalEffects are nested inside monster.fluff entries,
+	extracts them onto the monster so fix_lair_and_regional_misplacement can
+	properly create/link root legendaryGroup entries.
+	"""
+	fixes = 0
+	for monster in data.get("monster", []):
+		fluff = monster.get("fluff")
+		if not isinstance(fluff, dict):
+			continue
+		entries = fluff.get("entries")
+		if not isinstance(entries, list):
+			continue
+
+		lair_actions = None
+		regional_effects = None
+		intro_lore = []
+
+		def find_sections(items):
+			nonlocal lair_actions, regional_effects
+			for item in items:
+				if isinstance(item, str):
+					intro_lore.append(item)
+				elif isinstance(item, dict):
+					name = item.get("name", "")
+					if name == "Lair Actions":
+						lair_actions = item.get("entries")
+					elif name == "Regional Effects":
+						regional_effects = item.get("entries")
+					elif "entries" in item and isinstance(item["entries"], list):
+						find_sections(item["entries"])
+
+		find_sections(entries)
+
+		if lair_actions or regional_effects:
+			if lair_actions and "lairActions" not in monster:
+				full_lair = []
+				if intro_lore:
+					full_lair.append(intro_lore[0])
+				if isinstance(lair_actions, list):
+					full_lair.extend(lair_actions)
+				else:
+					full_lair.append(lair_actions)
+				monster["lairActions"] = full_lair
+				fixes += 1
+
+			if regional_effects and "regionalEffects" not in monster:
+				monster["regionalEffects"] = regional_effects
+				fixes += 1
+
+			if intro_lore:
+				monster["fluff"] = {"entries": [intro_lore[0]]}
+			else:
+				del monster["fluff"]
+				monster["hasFluff"] = False
+			fixes += 1
+
+	return fixes
+
+
+def fix_speed_hover(data: dict) -> int:
+	"""Ensures speed has 'canHover': true when fly speed includes hover."""
+	fixes = 0
+	for monster in data.get("monster", []):
+		speed = monster.get("speed")
+		if isinstance(speed, dict):
+			fly = speed.get("fly")
+			if isinstance(fly, dict) and "hover" in fly.get("condition", "").lower():
+				if not speed.get("canHover"):
+					speed["canHover"] = True
+					fixes += 1
+	return fixes
+
 
 def fix_sources(data: dict) -> int:
 	"""Ensures all monsters and legendaryGroups use the unified PoTACampaign source."""
@@ -350,13 +433,19 @@ def run_pipeline(add_payload=None, force_timestamp: bool = False, check_mode: bo
 		added_names = add_incoming_creatures(data, add_payload)
 		print(f"Imported/Updated creature(s): {', '.join(added_names)}")
 
-	# 2. Extract misplaced lairActions / regionalEffects from monsters
+	# 2. Extract nested lairActions / regionalEffects from fluff if present
+	extract_lair_and_regional_from_fluff(data)
+
+	# 3. Extract misplaced lairActions / regionalEffects from monsters into root legendaryGroup
 	fix_lair_and_regional_misplacement(data)
 
-	# 3. Fix sources
+	# 4. Ensure hover speeds have canHover: true
+	fix_speed_hover(data)
+
+	# 5. Fix sources
 	fix_sources(data)
 
-	# 4. Clean up dangling legendaryGroup references
+	# 6. Clean up dangling legendaryGroup references
 	fix_legendary_group_references(data)
 
 	# 5. Walk and clean text tags & spell typos
