@@ -49,6 +49,12 @@ TEXT_REPLACEMENTS = [
 	(re.compile(r"(?<!\{@dc )\bDC\s*(\d+)"), r"{@dc \1}"),
 	# Untagged hit modifiers: "(+12 to hit)" -> "({@hit 12} to hit)"
 	(re.compile(r"\(\+([0-9]+)\s+to\s+hit\)"), r"({@hit \1} to hit)"),
+	# Untagged concentration: "dropping concentration on" -> "dropping {@status concentration} on"
+	(re.compile(r"\bdropping concentration on\b"), r"dropping {@status concentration} on"),
+	# Untagged common skill checks: "Strength (Athletics)" -> "Strength ({@skill Athletics})"
+	(re.compile(r"\bStrength \(Athletics\)"), r"Strength ({@skill Athletics})"),
+	(re.compile(r"\bDexterity \(Acrobatics\)"), r"Dexterity ({@skill Acrobatics})"),
+	(re.compile(r"\bWisdom \(Perception\)"), r"Wisdom ({@skill Perception})"),
 ]
 
 # Regex replacements applied to 'name' keys (actions, traits, bonus, reactions)
@@ -110,6 +116,15 @@ def fix_sources(data: dict) -> int:
 		if monster.get("source") != TARGET_SOURCE:
 			monster["source"] = TARGET_SOURCE
 			fixes += 1
+
+		# In 5etools, embedded monster fluff is an object { "entries": [...] } without name/source
+		if "fluff" in monster and isinstance(monster["fluff"], dict):
+			if "source" in monster["fluff"]:
+				del monster["fluff"]["source"]
+				fixes += 1
+			if "name" in monster["fluff"]:
+				del monster["fluff"]["name"]
+				fixes += 1
 
 	for lg in data.get("legendaryGroup", []):
 		if lg.get("source") != TARGET_SOURCE:
