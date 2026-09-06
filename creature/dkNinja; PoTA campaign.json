@@ -17,7 +17,7 @@
 		],
 		"edition": "classic",
 		"dateAdded": 1725609600,
-		"dateLastModified": 1788686320
+		"dateLastModified": 1788687744
 	},
 	"monster": [
 		{
@@ -909,6 +909,423 @@
 			"savingThrowForced": [
 				"dexterity",
 				"strength",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Lee (Laileb), Scion of Phlegethos",
+			"shortName": "Lee",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PoTACampaign",
+			"page": 1,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"tiefling"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"{@item Robe of the Archmagi}"
+					]
+				}
+			],
+			"hp": {
+				"average": 278,
+				"formula": "20d8 + 140"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 14,
+			"dex": 18,
+			"con": 18,
+			"int": 16,
+			"wis": 14,
+			"cha": 24,
+			"save": {
+				"con": "+11",
+				"wis": "+9",
+				"cha": "+14"
+			},
+			"skill": {
+				"arcana": "+10",
+				"deception": "+14",
+				"intimidation": "+14",
+				"persuasion": "+14",
+				"sleight of hand": "+11"
+			},
+			"senses": [
+				"darkvision 120 ft.",
+				"truesight 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"cold",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Infernal",
+				"telepathy 120 ft."
+			],
+			"cr": "24",
+			"spellcasting": [
+				{
+					"name": "Dual-Class Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Lee is a 20th-level dual spellcaster (Sorcerer/Warlock). His spellcasting ability is Charisma (spell save {@dc 24}, {@hit 16} to hit with spell attacks; with Warlock spells via his {@item Rod of the Pact Keeper, +2||rod of the pact keeper +2}, spell save {@dc 26}, {@hit 18} to hit with spell attacks). He has the following spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell fire bolt}",
+								"{@spell guidance}",
+								"{@spell mage hand}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}",
+								"{@spell shocking grasp}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell absorb elements}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell mirror image}",
+								"{@spell misty step}",
+								"{@spell scorching ray}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell fireball}",
+								"{@spell slow}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell dimension door}",
+								"{@spell greater invisibility}"
+							]
+						},
+						"5": {
+							"slots": 7,
+							"spells": [
+								"{@spell hold monster}",
+								"{@spell synaptic static}",
+								"{@spell wall of fire}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell chain lightning}",
+								"{@spell disintegrate}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell delayed blast fireball}",
+								"{@spell forcecage}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell dominate monster}",
+								"{@spell incendiary cloud}"
+							]
+						},
+						"9": {
+							"slots": 2,
+							"spells": [
+								"{@spell meteor swarm}",
+								"{@spell time stop}",
+								"{@spell wish}"
+							]
+						}
+					},
+					"ability": "cha"
+				},
+				{
+					"name": "Mystic Arcanum",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Lee can cast each of the following spells once per day without expending a spell slot:"
+					],
+					"daily": {
+						"1e": [
+							"{@spell mass suggestion}",
+							"{@spell plane shift}",
+							"{@spell feeblemind}",
+							"{@spell power word kill}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Lord of Phlegethos (Dual Mind)",
+					"entries": [
+						"Lee can concentrate on up to two spells simultaneously. When he makes a Constitution saving throw to maintain concentration, a single roll applies to both spells. In addition, allied fiends summoned by Lee gain temporary hit points equal to half his hit point maximum (139 hit points) upon appearing. While within 60 feet of Lee, these minions share his Magic Resistance trait and add +7 to their attack and damage rolls."
+					]
+				},
+				{
+					"name": "Dark One's Blessing",
+					"entries": [
+						"When Lee reduces a hostile creature to 0 hit points, he gains 23 temporary hit points."
+					]
+				},
+				{
+					"name": "Dark One's Own Luck (Recharges after a Short or Long Rest)",
+					"entries": [
+						"When Lee makes an ability check or a saving throw, he can add a {@dice d10} to the roll. He can do so after seeing the initial roll but before any of the roll's effects occur."
+					]
+				},
+				{
+					"name": "Elemental Affinity & Hellfire Mastery",
+					"entries": [
+						"When Lee casts a spell that deals fire damage, he adds +7 to one damage roll of that spell. Furthermore, fire damage dealt by Lee ignores fire resistance and treats fire immunity as fire resistance."
+					]
+				},
+				{
+					"name": "Font of Magic (20 Sorcery Points)",
+					"entries": [
+						"Lee has 20 sorcery points that he regains when he finishes a long rest. He regains 4 expended sorcery points whenever he finishes a short rest."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"If Lee fails a saving throw, he can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Lee has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Lee regains 20 hit points at the start of his turn if he has at least 1 hit point. If he takes cold or radiant damage, this trait doesn't function at the start of his next turn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Lee uses Infernal Command and makes four Eldritch Blast attacks, or he casts one spell and makes two Eldritch Blast attacks."
+					]
+				},
+				{
+					"name": "Eldritch Blast",
+					"entries": [
+						"{@atk rs} {@hit 18} to hit, range 300 ft., one target. {@h}12 ({@damage 1d10 + 7}) force damage, and the target is pushed up to 10 feet away from Lee in a straight line."
+					]
+				},
+				{
+					"name": "Fire Bolt",
+					"entries": [
+						"{@atk rs} {@hit 16} to hit, range 120 ft., one target. {@h}29 ({@damage 4d10 + 7}) fire damage."
+					]
+				},
+				{
+					"name": "Infernal Command",
+					"entries": [
+						"Each fiendish ally of Lee's within 60 feet of him can't be {@condition charmed} or {@condition frightened} until the end of his next turn, and gains advantage on attack rolls until the start of Lee's next turn."
+					]
+				},
+				{
+					"name": "Summon Infernal Legion (1/Day)",
+					"entries": [
+						"Lee rips open an infernal conduit to Phlegethos, conjuring an infernal horde in unoccupied spaces within 90 feet of him. He chooses one of the following groups:",
+						{
+							"type": "list",
+							"items": [
+								"2d4 {@creature bearded devil||bearded devils} and 1d4 {@creature barbed devil||barbed devils}",
+								"1 {@creature bone devil} and 2d6 {@creature spined devil||spined devils}",
+								"1 {@creature horned devil} or 1 {@creature erinyes}"
+							]
+						},
+						"Summoned fiends act immediately after Lee in the initiative order, obey his telepathic commands without requiring an action, and remain for 1 hour, until Lee dies, or until he dismisses them as a bonus action."
+					]
+				},
+				{
+					"name": "Talisman of Ultimate Evil (6 Charges)",
+					"entries": [
+						"Lee targets one creature he can see within 120 feet that is of a Good alignment. The target must make a {@dc 20} Dexterity saving throw. On a failed save, it takes 35 ({@damage 10d6}) radiant damage and falls through a flaming fissure into the underworld, instantly destroyed if it is not a deity. On a successful save, it takes half as much damage."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Villainous Spell Surge",
+					"entries": [
+						"When Lee casts a spell of 1st level or higher using his action, he can cast one cantrip or make two Eldritch Blast attacks as a bonus action."
+					]
+				},
+				{
+					"name": "Metamagic: Quickened Spell (Costs 2 Sorcery Points)",
+					"entries": [
+						"When Lee casts a spell that has a casting time of 1 action, he changes the casting time to 1 bonus action for this casting."
+					]
+				},
+				{
+					"name": "Metamagic: Subtle Spell (Costs 1 Sorcery Point)",
+					"entries": [
+						"Lee casts a spell without somatic or verbal components."
+					]
+				},
+				{
+					"name": "Metamagic: Twinned Spell (Costs 1–9 Sorcery Points)",
+					"entries": [
+						"When Lee casts a spell that targets only one creature and doesn't have a range of self, he targets a second creature in range with the same spell (costs sorcery points equal to the spell's level; 1 for a cantrip)."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Hellish Rebuke (5th-Level Slot)",
+					"entries": [
+						"When damaged by a creature within 60 feet that Lee can see, the attacker must make a {@dc 26} Dexterity saving throw, taking 33 ({@damage 6d10}) fire damage on a failed save, or half as much on a successful one."
+					]
+				},
+				{
+					"name": "Infernal Ring Leader",
+					"entries": [
+						"When Lee is hit by an attack, he can choose one allied fiend within 10 feet of him. That ally is hit by the attack instead."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Eldritch Volley",
+					"entries": [
+						"Lee makes two Eldritch Blast attacks."
+					]
+				},
+				{
+					"name": "Fiendish Stride",
+					"entries": [
+						"Lee teleports up to 60 feet to an unoccupied space he can see without provoking opportunity attacks."
+					]
+				},
+				{
+					"name": "Command Legion",
+					"entries": [
+						"Up to two allied fiends within 60 feet of Lee each use their reaction to move up to their speed or make one weapon attack."
+					]
+				},
+				{
+					"name": "Infernal Swarm (Costs 2 Actions)",
+					"entries": [
+						"Lee conjures 2 {@creature spined devil||spined devils} or 1 {@creature barbed devil} in unoccupied spaces within 60 feet of him."
+					]
+				},
+				{
+					"name": "Cast Spell (Costs 1–3 Actions)",
+					"entries": [
+						"Lee expends a spell slot to cast a spell of 1st, 2nd, or 3rd level. The action cost equals the level of the spell cast."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D",
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"I",
+				"TP"
+			],
+			"damageTags": [
+				"F",
+				"O",
+				"R"
+			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"L",
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CC",
+				"CW"
+			],
+			"miscTags": [
+				"RS"
+			],
+			"conditionInflict": [
+				"charmed",
+				"frightened",
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"intelligence",
 				"wisdom"
 			]
 		},
