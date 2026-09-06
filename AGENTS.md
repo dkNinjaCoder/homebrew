@@ -101,16 +101,62 @@ In 5etools, `legendaryGroup` definitions do **NOT** accept a top-level `"entries
 
 ---
 
+## Automated Maintenance Script: `scripts/clean_and_sync.py`
+
+A dedicated Python script is provided at [`scripts/clean_and_sync.py`](file:///home/manan/Programs/homebrew/scripts/clean_and_sync.py) to automatically perform all routine cleanups, schema validations, and file synchronizations.
+
+### What the Script Handles Automatically:
+1. **Source Unification**: Sets `"source": "PoTACampaign"` on all creatures and legendary groups.
+2. **Mechanics & Tag Normalization**:
+   - Replaces untagged DCs (e.g., `DC 21`, `DC21`) with `{@dc 21}`.
+   - Replaces untagged hit bonuses (e.g., `(+12 to hit)`) with `({@hit 12} to hit)`.
+   - Normalizes recharge syntax in action/trait names (e.g., `(Recharge 5–6)` -> `{@recharge 5}`).
+   - Fixes common spell typos (e.g., `forbadance` -> `forbiddance`).
+3. **Legendary Group Handling**:
+   - Automatically extracts any `lairActions` or `regionalEffects` accidentally placed directly on a monster object into the root `legendaryGroup` array.
+   - Cleans up dangling `legendaryGroup` references on monsters that don't have matching definitions.
+4. **Alphabetical Sorting**: Sorts both `"monster"` and `"legendaryGroup"` arrays alphabetically by `name`.
+5. **Timestamp Synchronization**: Updates `_meta.dateLastModified` and `_generated/index-timestamps.json` with the current Unix timestamp whenever data changes.
+6. **Documentation Synchronization**: Re-generates and updates the creature list in [`README.md`](file:///home/manan/Programs/homebrew/README.md) under `## Contents`.
+
+### How to Run:
+```bash
+# Clean, fix, and sync existing data in-place:
+python3 scripts/clean_and_sync.py
+
+# Or add/update creature(s) directly from a JSON file, string, or stdin:
+python3 scripts/clean_and_sync.py --add creature.json
+
+# Dry-run validation (exits 0 if clean, 1 if fixes are needed):
+python3 scripts/clean_and_sync.py --check
+```
+
+### Adding New Fixes to the Script:
+When you discover a new typo pattern, schema issue, or tag normalization rule, **add it to [`scripts/clean_and_sync.py`](file:///home/manan/Programs/homebrew/scripts/clean_and_sync.py)**:
+- **Spell Typos**: Add entries to `SPELL_TYPOS = { "typo": "correct" }`.
+- **Text Regexes**: Add tuples to `TEXT_REPLACEMENTS = [ (compiled_regex, replacement), ... ]`.
+- **Name Regexes**: Add tuples to `NAME_REPLACEMENTS = [ (compiled_regex, replacement), ... ]`.
+- **Structural / Schema Fixes**: Add a new `fix_*` function and call it inside `run_pipeline()`.
+
+---
+
 ## Standard Checklist When Adding / Updating Creatures
 
 Whenever modifying or adding a creature:
-1. **Edit [`creature/dkNinja; PoTA campaign.json`](file:///home/manan/Programs/homebrew/creature/dkNinja;%20PoTA%20campaign.json)**:
-   - Insert/update the creature object in the `"monster"` array (maintain alphabetical order).
-   - If the creature has lair actions / regional effects, add the entry in the `"legendaryGroup"` array (maintain alphabetical order) and reference it via `"legendaryGroup"` in the monster block.
-   - Update `_meta.dateLastModified` with the current Unix timestamp (`date +%s`).
-2. **Edit [`_generated/index-timestamps.json`](file:///home/manan/Programs/homebrew/_generated/index-timestamps.json)**:
-   - Update the `"m"` timestamp for `"creature/dkNinja; PoTA campaign.json"` to match `_meta.dateLastModified`.
-3. **Edit [`README.md`](file:///home/manan/Programs/homebrew/README.md)**:
-   - Add/update the creature under `## Contents` (maintain alphabetical order).
-4. **Quick Syntax Validation**:
-   - Run: `python3 -c "import json; json.load(open('creature/dkNinja; PoTA campaign.json')); json.load(open('_generated/index-timestamps.json')); print('OK')"`
+1. **Add/Edit Creature**:
+   - Either paste/edit the creature in [`creature/dkNinja; PoTA campaign.json`](file:///home/manan/Programs/homebrew/creature/dkNinja;%20PoTA%20campaign.json), OR run:
+     ```bash
+     python3 scripts/clean_and_sync.py --add path/to/creature.json
+     ```
+2. **Run the Cleaner & Synchronizer**:
+   - Run:
+     ```bash
+     python3 scripts/clean_and_sync.py
+     ```
+   - This automatically fixes tags, normalizes sources, sorts entries alphabetically, syncs timestamps across files, and updates [`README.md`](file:///home/manan/Programs/homebrew/README.md).
+3. **Verify Everything is Clean**:
+   - Run:
+     ```bash
+     python3 scripts/clean_and_sync.py --check
+     ```
+

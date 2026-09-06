@@ -7,7 +7,6 @@ All rules, architecture details, schemas, and standards for this repository are 
 ## Critical Highlights
 
 - **NO NPM / NODE COMMANDS**: Never run `npm install`, `npm test`, `npm run ...`, or `node ...`. Node dependencies are not installed locally and must not be installed in this environment. Validation is handled by remote CI.
-- **Python for Validation**: If validating JSON files, use standard Python (`python3 -c "import json; ..."`).
-- **Single Source Identifier**: All homebrew content in [`creature/dkNinja; PoTA campaign.json`](creature/dkNinja;%20PoTA%20campaign.json) must use `"source": "PoTACampaign"`.
-- **Indentation & Formatting**: Tabs (`\t`), LF (`\n`), UTF-8 encoding.
-- **Full Checklist**: See [`AGENTS.md`](AGENTS.md) for the 4-step checklist when adding or updating creatures.
+- **Maintenance Script**: Run `python3 scripts/clean_and_sync.py` to automatically normalize sources, fix mechanics tags/spelling, sort creatures, sync timestamps, and update `README.md`.
+- **Validation**: Run `python3 scripts/clean_and_sync.py --check` or standard Python JSON loading.
+- **Workflow**: See [`AGENTS.md`](AGENTS.md) for full instructions and checklist.

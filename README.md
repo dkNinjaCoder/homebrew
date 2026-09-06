@@ -8,9 +8,11 @@ Homebrew JSONs compatible with [5etools](https://5e.tools/).
   - **Belial (Prince of the Covetous, Lord of Lusts)** — CR 22 Fiend (Devil)
   - **Clarion** — CR 24 Dragon
   - **Felgolos** — CR 15 Dragon
+  - **Ghesh Mageddon, the Undying Dread** — CR 22 Undead (Dragonborn)
   - **Lee (Laileb), Scion of Phlegethos** — CR 24 Fiend (Tiefling)
   - **Renwick the Ascendant** — CR 21 Undead (Lich), with Lair Actions and Regional Effects
   - **Tanazir Silverquil** — CR 26 Dragon, with Mythic Phase, Lair Actions, and Regional Effects
+  - **Wairi Silvermoustache, Exalted High Marshal** — CR 22 Humanoid (Dwarf)
 
 All creatures are grouped under the single source **PoTA campaign (PoTA)**.
 

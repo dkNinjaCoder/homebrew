@@ -17,7 +17,7 @@
 		],
 		"edition": "classic",
 		"dateAdded": 1725609600,
-		"dateLastModified": 1788687744
+		"dateLastModified": 1788690919
 	},
 	"monster": [
 		{
@@ -92,7 +92,7 @@
 				{
 					"name": "Corrupting Touch",
 					"entries": [
-						"{@atk mw} {@hit 14} to hit, reach 5 ft., one target. {@h}20 ({@damage 3d8 + 7}) psychic damage and the target must succeed on a DC24 Wisdom saving throw or become {@condition charmed} by Belial for one minute."
+						"{@atk mw} {@hit 14} to hit, reach 5 ft., one target. {@h}20 ({@damage 3d8 + 7}) psychic damage and the target must succeed on a {@dc 24} Wisdom saving throw or become {@condition charmed} by Belial for one minute."
 					]
 				}
 			],
@@ -897,6 +897,334 @@
 			],
 			"spellcastingTags": [
 				"CL"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened",
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Ghesh Mageddon, the Undying Dread",
+			"shortName": "Ghesh",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PoTACampaign",
+			"page": 1,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"dragonborn"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 23,
+					"from": [
+						"{@item Efreeti Chain}",
+						"{@item Animated Shield}"
+					]
+				}
+			],
+			"hp": {
+				"average": 290,
+				"formula": "20d10 + 180"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 14,
+			"con": 20,
+			"int": 12,
+			"wis": 14,
+			"cha": 22,
+			"save": {
+				"str": "+6",
+				"dex": "+2",
+				"con": "+11",
+				"int": "+1",
+				"wis": "+14",
+				"cha": "+18"
+			},
+			"skill": {
+				"athletics": "+12",
+				"intimidation": "+18",
+				"persuasion": "+12",
+				"stealth": "+8",
+				"survival": "+8"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"acid",
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Dwarvish",
+				"Giant",
+				"Primordial"
+			],
+			"cr": "22",
+			"spellcasting": [
+				{
+					"name": "Paladin Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Ghesh is a 20th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 20}, {@hit 12} to hit with spell attacks, or {@hit 14} when using the {@item Talisman of Ultimate Evil}). He has the following paladin spells prepared:"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell divine favor}",
+								"{@spell hellish rebuke}",
+								"{@spell inflict wounds}",
+								"{@spell searing smite}",
+								"{@spell thunderous smite}",
+								"{@spell wrathful smite}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell aid}",
+								"{@spell branding smite}",
+								"{@spell crown of madness}",
+								"{@spell darkness}",
+								"{@spell magic weapon}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell animate dead}",
+								"{@spell bestow curse}",
+								"{@spell blinding smite}",
+								"{@spell elemental weapon}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell blight}",
+								"{@spell confusion}",
+								"{@spell staggering smite}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell banishing smite}",
+								"{@spell contagion}",
+								"{@spell dominate person}",
+								"{@spell destructive wave}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Hate & Courage",
+					"entries": [
+						"Ghesh, along with allied fiends and undead within 30 feet of him, gains a +6 bonus to melee weapon damage rolls (included in attacks). Furthermore, Ghesh and friendly creatures within 30 feet can't be {@condition frightened}."
+					]
+				},
+				{
+					"name": "Aura of Protection",
+					"entries": [
+						"Whenever Ghesh or a friendly creature within 30 feet of him must make a saving throw, the creature gains a +6 bonus to the saving throw (already included in Ghesh's saves)."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"If Ghesh fails a saving throw, he can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Ghesh has advantage on saving throws against spells and other magical effects while wearing his {@item Mantle of Spell Resistance}."
+					]
+				},
+				{
+					"name": "Tunnel Sentinel",
+					"entries": [
+						"Ghesh can make opportunity attacks without expending his reaction. In addition, when a creature moves 5 feet or more while within his reach, he can use his reaction to make a melee weapon attack against it."
+					]
+				},
+				{
+					"name": "Undead Nature & Undying Soul (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Ghesh doesn't require air, food, drink, or sleep. If reduced to 0 hit points, he can make a {@dc 10} Constitution saving throw; on a success, he drops to 1 hit point instead."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ghesh makes three melee attacks with The Chaos Star or the Giant Slayer Greataxe. He can replace one attack with his Black Dragon Breath."
+					]
+				},
+				{
+					"name": "The Chaos Star (+2 Lance)",
+					"entries": [
+						"{@atk mw} {@hit 14} to hit, reach 10 ft., one target. {@h}14 ({@damage 1d12 + 8}) piercing damage plus 6 necrotic damage and 4 ({@damage 1d8}) radiant damage (from Improved Divine Smite). Ghesh rolls a {@dice d8} on a hit or critical smite for a chaos surge: 1 fire ({@damage 1d8}), 2 cold ({@damage 1d8}), 3 poison ({@damage 1d8}, or {@damage 5d6} ignoring resistance/immunity), 4 lightning ({@damage 1d8}), 5 acid ({@damage 1d8}), 6 force ({@damage 1d8}), 7 converts all damage to slashing (+{@damage 2d8}), 8 heals target for damage dealt instead."
+					]
+				},
+				{
+					"name": "Giant Slayer Greataxe",
+					"entries": [
+						"{@atk mw} {@hit 13} to hit, reach 5 ft., one target. {@h}13 ({@damage 1d12 + 7}) slashing damage plus 6 necrotic damage and 4 ({@damage 1d8}) radiant damage. If the target is a giant, it takes an extra 7 ({@damage 2d6}) slashing damage and must succeed on a {@dc 15} Strength saving throw or fall {@condition prone}."
+					]
+				},
+				{
+					"name": "Black Dragon Breath {@recharge 5}",
+					"entries": [
+						"Ghesh exhales a stream of unholy acid in a 30-foot line that is 5 feet wide. Each creature in that line must make a {@dc 19} Dexterity saving throw, taking 35 ({@damage 10d6}) acid damage on a failed save, or half as much damage on a successful one."
+					]
+				},
+				{
+					"name": "Dread Lord (1/Day)",
+					"entries": [
+						"Ghesh surrounds himself with an aura of gloom that lasts for 1 minute. The aura reduces bright light within 30 feet to dim light. Any enemy that is {@condition frightened} of Ghesh and starts its turn in the aura takes 22 ({@damage 4d10}) psychic damage. Ghesh and allies he chooses inside the aura are draped in deep shadows; creatures that rely on sight have disadvantage on attack rolls against them. While the aura lasts, Ghesh can use a bonus action to direct the shadows to strike one target with a melee spell attack ({@hit 12} to hit), dealing 16 ({@damage 3d10}) + 6 necrotic damage on a hit."
+					]
+				},
+				{
+					"name": "Talisman of Ultimate Evil (6 Charges)",
+					"entries": [
+						"Ghesh expends 1 charge targeting one good creature he can see on the ground within 120 feet. A flaming fissure opens beneath it; the target must succeed on a {@dc 20} Dexterity saving throw or fall in and be destroyed."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Lay on Hands (Pool: 100 HP)",
+					"entries": [
+						"Ghesh touches an ally or himself, expending points to heal damage or cure poison/disease (5 HP per cure). As an undead lord, he can also use this pool to heal allied undead."
+					]
+				},
+				{
+					"name": "Chaos Recall",
+					"entries": [
+						"Ghesh summons either The Chaos Star or his greataxe instantly to his hand from anywhere on the same plane of existence."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Chaos Warp (3 Charges, Recharges 1d3 at Dawn)",
+					"entries": [
+						"When an attacker misses Ghesh or hits an ally, Ghesh expends 1 charge from The Chaos Star to teleport the attacker to an unoccupied space within 5 feet of him. There is a 50% chance Ghesh teleports adjacent to the attacker instead."
+					]
+				},
+				{
+					"name": "Hellish Rebuke (5th-Level Spell)",
+					"entries": [
+						"When damaged by a creature within 60 feet that he can see, Ghesh forces it to make a {@dc 20} Dexterity saving throw, taking 33 ({@damage 6d10}) fire damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Chaos Skewer",
+					"entries": [
+						"Ghesh makes one melee weapon attack."
+					]
+				},
+				{
+					"name": "Channel Divinity: Dreadful Aspect (Costs 2 Actions)",
+					"entries": [
+						"Each creature of Ghesh's choice within 30 feet that can see him must make a {@dc 20} Wisdom saving throw or become {@condition frightened} of him for 1 minute."
+					]
+				},
+				{
+					"name": "Shadow Step (Costs 2 Actions)",
+					"entries": [
+						"Ghesh teleports up to 30 feet to an unoccupied dim light or dark space he can see."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Breath Weapon"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"D",
+				"GI",
+				"P"
+			],
+			"damageTags": [
+				"A",
+				"F",
+				"N",
+				"P",
+				"R",
+				"S",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"A",
+				"F",
+				"N",
+				"R",
+				"T"
+			],
+			"spellcastingTags": [
+				"CP"
 			],
 			"miscTags": [
 				"MW",
@@ -1959,6 +2287,353 @@
 				"name": "Tanazir Silverquil",
 				"source": "PoTACampaign"
 			}
+		},
+		{
+			"name": "Wairi Silvermoustache, Exalted High Marshal",
+			"shortName": "Wairi",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PoTACampaign",
+			"page": 1,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item Breastplate +2}",
+						"shield",
+						"dwarven resolve"
+					]
+				}
+			],
+			"hp": {
+				"average": 260,
+				"formula": "20d8 + 140 + 40"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 18,
+			"int": 16,
+			"wis": 24,
+			"cha": 16,
+			"save": {
+				"str": "+4",
+				"dex": "+2",
+				"con": "+10",
+				"int": "+3",
+				"wis": "+13",
+				"cha": "+9"
+			},
+			"skill": {
+				"athletics": "+10",
+				"history": "+9",
+				"insight": "+13",
+				"perception": "+13",
+				"religion": "+9"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 23,
+			"resist": [
+				"poison",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"frightened"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Giant"
+			],
+			"cr": "22",
+			"spellcasting": [
+				{
+					"name": "Cleric Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Wairi is a 20th-level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 21}, {@hit 13} to hit with spell attacks). He has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance}",
+								"{@spell light}",
+								"{@spell sacred flame}",
+								"{@spell spare the dying}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bless}",
+								"{@spell command}",
+								"{@spell cure wounds}",
+								"{@spell detect evil and good}",
+								"{@spell divine favor}",
+								"{@spell guiding bolt}",
+								"{@spell healing word}",
+								"{@spell shield of faith}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell aid}",
+								"{@spell hold person}",
+								"{@spell lesser restoration}",
+								"{@spell magic weapon}",
+								"{@spell silence}",
+								"{@spell spiritual weapon}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell crusader's mantle}",
+								"{@spell daylight}",
+								"{@spell dispel magic}",
+								"{@spell revivify}",
+								"{@spell spirit guardians}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell death ward}",
+								"{@spell freedom of movement}",
+								"{@spell stoneskin}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell flame strike}",
+								"{@spell greater restoration}",
+								"{@spell hold monster}",
+								"{@spell mass cure wounds}",
+								"{@spell raise dead}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell blade barrier}",
+								"{@spell forbiddance}",
+								"{@spell harm}",
+								"{@spell heal}",
+								"{@spell word of recall}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell conjure celestial}",
+								"{@spell divine word}",
+								"{@spell fire storm}",
+								"{@spell plane shift}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell antimagic field}",
+								"{@spell holy aura}",
+								"{@spell sunburst}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell gate}",
+								"{@spell mass heal}",
+								"{@spell true resurrection}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Avatar of Battle & Adamantine Protection",
+					"entries": [
+						"Wairi has resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks. Furthermore, any critical hit scored against Wairi becomes a normal hit."
+					]
+				},
+				{
+					"name": "Boon of Fortitude",
+					"entries": [
+						"Wairi's hit point maximum is increased by 40 (already included)."
+					]
+				},
+				{
+					"name": "Guaranteed Divine Intervention (1/Week)",
+					"entries": [
+						"As an action, Wairi calls upon Torm to directly intervene. The request automatically succeeds without rolling percentile dice, duplicating the effect of any cleric spell or domain spell of 9th level or lower."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"If Wairi fails a saving throw, he can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Supreme Healing",
+					"entries": [
+						"Whenever Wairi casts a spell that restores hit points to a creature, he uses the highest possible number for each die rolled instead of rolling."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Wairi makes three weapon attacks with his Longbow +2 or the Staff of Healing, or he casts one spell and makes one weapon attack."
+					]
+				},
+				{
+					"name": "Longbow +2",
+					"entries": [
+						"{@atk rw} {@hit 10} to hit, range 150/600 ft., one target. {@h}8 ({@damage 1d8 + 4}) piercing damage plus 9 ({@damage 2d8}) radiant damage (from Divine Strike). Once per short rest, Wairi can grant himself a +20 bonus to this attack roll (Boon of Peerless Aim)."
+					]
+				},
+				{
+					"name": "Staff of Healing",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) bludgeoning damage plus 9 ({@damage 2d8}) radiant damage."
+					]
+				},
+				{
+					"name": "Sunburst (8th-Level Spell; 1 Slot)",
+					"entries": [
+						"Brilliant sunlight flashes in a 60-foot-radius sphere centered on a point up to 150 feet away. Each creature in that light must make a {@dc 21} Constitution saving throw, taking 42 ({@damage 12d6}) radiant damage and becoming {@condition blinded} for 1 minute on a failed save, or half as much on a success. Undead and oozes have disadvantage on this save."
+					]
+				},
+				{
+					"name": "Destroy Undead",
+					"entries": [
+						"Wairi presents his holy symbol. Each undead within 30 feet that can see or hear him must make a {@dc 21} Wisdom saving throw. Undead of CR 4 or lower that fail are instantly destroyed; other failing undead are turned for 1 minute."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "War Priest (6/Day)",
+					"entries": [
+						"When Wairi takes the Attack action, he can make one additional weapon attack as a bonus action."
+					]
+				},
+				{
+					"name": "Necklace of Prayer Beads",
+					"entries": [
+						"Wairi activates one magic bead on his necklace as a bonus action to cast {@spell bless}, {@spell cure wounds} (2nd level), {@spell branding smite}, {@spell greater restoration}, {@spell planar ally}, or {@spell wind walk} without expending a spell slot."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Channel Divinity: War God's Blessing (3/Day)",
+					"entries": [
+						"When a creature within 30 feet of Wairi makes an attack roll, Wairi can grant that creature a +10 bonus to the roll after seeing the roll."
+					]
+				},
+				{
+					"name": "Blaze of Glory (1/Day)",
+					"entries": [
+						"When reduced to 0 hit points by an attacker he can see, Wairi moves up to 30 feet toward the attacker and makes one melee attack with advantage, dealing an extra 27 ({@damage 5d10}) radiant damage and 27 ({@damage 5d10}) weapon damage on a hit before dropping to 0 HP."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Commanding Shot",
+					"entries": [
+						"Wairi makes one Longbow +2 attack."
+					]
+				},
+				{
+					"name": "Divine Ward (Costs 2 Actions)",
+					"entries": [
+						"Wairi casts {@spell shield of faith} or {@spell sanctuary} on an ally within range without expending a spell slot."
+					]
+				},
+				{
+					"name": "Radiant Eruption (Costs 3 Actions)",
+					"entries": [
+						"Sacred light bursts in a 20-foot radius centered on Wairi. Enemies must make a {@dc 21} Dexterity saving throw, taking 28 ({@damage 8d6}) radiant damage on a failed save, or half as much on a successful one. Allies in the area regain 20 hit points."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"GI"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"R"
+			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			]
 		}
 	],
 	"legendaryGroup": [
