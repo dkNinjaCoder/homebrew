@@ -17,7 +17,7 @@
 		],
 		"edition": "classic",
 		"dateAdded": 1725609600,
-		"dateLastModified": 1788691276
+		"dateLastModified": 1788709705
 	},
 	"monster": [
 		{
@@ -108,8 +108,18 @@
 				"AOE"
 			],
 			"hasFluff": true,
-			"hasFluffImages": false,
+			"hasFluffImages": true,
 			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/CoA/Belial.webp"
+						},
+						"credit": "Aaron Sims"
+					}
+				],
 				"entries": [
 					"Belial is a 10-foot-tall handsome humanoid with chalky skin and reddish-brown hair and beard. Rams horns curling from his wide brow flicker with hellfire. Charred wings sprout from the fiend’s back, revealing the last vestiges of his once angelic form.",
 					"Belial is the most capricious and chaotic of the princes of darkness, leaving many among the courts of Hell to wonder if he has not been fully corrupted by demonic influences. Belial, more than others has made pacts with demons, and dark gods of the Underworld. He is always on the hunt for portals that allow him greater time and access to the mortal realms.",
@@ -303,8 +313,8 @@
 				}
 			],
 			"token": {
-				"name": "Pit Fiend",
-				"source": "MM"
+				"name": "Belial",
+				"source": "CoA"
 			},
 			"damageTags": [
 				"N",
@@ -638,7 +648,27 @@
 			],
 			"savingThrowForcedLegendary": [
 				"dexterity"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MM/Silver Dragon.webp"
+						}
+					}
+				],
+				"entries": [
+					"Clarion is a noble silver dragon who owes a favor to Queen Dagnabbet of Mithral Hall, occasionally aiding the Lords' Alliance when great threats arise."
+				]
+			},
+			"token": {
+				"name": "Adult Silver Dragon",
+				"source": "MM"
+			}
 		},
 		{
 			"name": "Felgolos",
@@ -910,7 +940,27 @@
 				"dexterity",
 				"strength",
 				"wisdom"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MM/Bronze Dragon.webp"
+						}
+					}
+				],
+				"entries": [
+					"Felgolos, known as 'The Flying Misfortune', is an awkward and well-meaning adult bronze dragon known for his uncanny knack of blundering into trouble and his penchant for stealing wagons and cargo from the Zhentarim."
+				]
+			},
+			"token": {
+				"name": "Felgolos",
+				"source": "SKT"
+			}
 		},
 		{
 			"name": "Ghesh Mageddon, the Undying Dread",
@@ -1979,7 +2029,27 @@
 				"dexterity",
 				"intelligence",
 				"wisdom"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MM/Lich.webp"
+						}
+					}
+				],
+				"entries": [
+					"Renwick Caradoon is an archmage and the brother of Samular Caradoon, founder of the Knights of Samular. Rather than succumb to battle wounds centuries ago, he drank an elixir of lichdom, and now resides within the Sacred Stone Monastery pursuing his solitary arcane studies."
+				]
+			},
+			"token": {
+				"name": "Renwick",
+				"source": "PotA"
+			}
 		},
 		{
 			"name": "Tanazir Silverquil",
