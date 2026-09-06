@@ -6,9 +6,10 @@ Homebrew JSONs compatible with [5etools](https://5e.tools/).
 
 - **`creature/dkNinja; PoTA campaign.json`**: Single homebrew pack (**PoTA campaign**) containing:
   - **Belial (Prince of the Covetous, Lord of Lusts)** — CR 22 Fiend (Devil)
+  - **Felgolos** — CR 15 Dragon
   - **Tanazir Silverquil** — CR 26 Dragon, with Mythic Phase, Lair Actions, and Regional Effects
 
-Both creatures are grouped under the single source **PoTA campaign (PoTA)**.
+All creatures are grouped under the single source **PoTA campaign (PoTA)**.
 
 ---
 
@@ -22,7 +23,7 @@ Both creatures are grouped under the single source **PoTA campaign (PoTA)**.
    https://raw.githubusercontent.com/dkNinjaCoder/homebrew/master/
    ```
 4. Click **"Get Homebrew"**.
-5. Select **"PoTA campaign"** and click to add. Both creatures will be imported under the single `PoTA` source.
+5. Select **"PoTA campaign"** and click to add. All creatures will be imported under the single `PoTA` source.
 
 ### Option 2: Load from URL
 1. In the 5etools **Homebrew Manager**, click **"Load from URL"**.

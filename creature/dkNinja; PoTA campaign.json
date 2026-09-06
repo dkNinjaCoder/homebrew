@@ -17,7 +17,7 @@
 		],
 		"edition": "classic",
 		"dateAdded": 1725609600,
-		"dateLastModified": 1788682638
+		"dateLastModified": 1788684212
 	},
 	"monster": [
 		{
@@ -322,6 +322,278 @@
 			],
 			"savingThrowForcedSpell": [
 				"charisma",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Felgolos",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PoTACampaign",
+			"page": 236,
+			"otherSources": [
+				{
+					"source": "SKT",
+					"page": 236
+				}
+			],
+			"size": [
+				"H"
+			],
+			"type": "dragon",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 212,
+				"formula": "17d12 + 102"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 80,
+				"swim": 40
+			},
+			"str": 25,
+			"dex": 10,
+			"con": 23,
+			"int": 16,
+			"wis": 15,
+			"cha": 19,
+			"save": {
+				"dex": "+5",
+				"con": "+11",
+				"wis": "+7",
+				"cha": "+9"
+			},
+			"skill": {
+				"insight": "+7",
+				"perception": "+12",
+				"stealth": "+5"
+			},
+			"senses": [
+				"blindsight 60 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 22,
+			"immune": [
+				"lightning"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Felgolos is a 14th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 17}, {@hit 9} to hit with spell attacks). Felgolos has the following sorcerer spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell dancing lights}",
+								"{@spell light}",
+								"{@spell mage hand}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell comprehend languages}",
+								"{@spell detect magic}",
+								"{@spell feather fall}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell detect thoughts}",
+								"{@spell locate object}",
+								"{@spell misty step}",
+								"{@spell suggestion}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell dispel magic}",
+								"{@spell tongues}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell dimension door}",
+								"{@spell polymorph}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell telekinesis}",
+								"{@spell teleportation circle}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell true seeing}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell teleport}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Felgolos can breathe air and water."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"If Felgolos fails a saving throw, he can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Uncanny Luck",
+					"entries": [
+						"Whenever Felgolos rolls a 1 on an attack roll, ability check, or saving throw, he can reroll the die and must use the new roll. Additionally, when a creature hits Felgolos with a critical hit, roll a {@dice d6}. On a 5 or 6, the attack becomes a normal hit instead."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Felgolos can use his Frightful Presence. He then makes three attacks: one with his bite and two with his claws."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}18 ({@damage 2d10 + 7}) piercing damage."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d6 + 7}) slashing damage."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 15 ft., one target. {@h}16 ({@damage 2d8 + 7}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Frightful Presence",
+					"entries": [
+						"Each creature of Felgolos's choice that is within 120 feet of him and aware of him must succeed on a {@dc 17} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to Felgolos's Frightful Presence for the next 24 hours."
+					]
+				},
+				{
+					"name": "Breath Weapons {@recharge 5}",
+					"entries": [
+						"Felgolos uses one of the following breath weapons:",
+						{
+							"type": "list",
+							"items": [
+								"{@b Lightning Breath.} Felgolos exhales lightning in a 60-foot line that is 5 feet wide. Each creature in that line must make a {@dc 19} Dexterity saving throw, taking 66 ({@damage 12d10}) lightning damage on a failed save, or half as much damage on a successful one.",
+								"{@b Repulsion Breath.} Felgolos exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a {@dc 19} Strength saving throw. On a failed save, the creature is pushed 60 feet away from Felgolos."
+							]
+						}
+					]
+				},
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Felgolos magically polymorphs into a humanoid or beast that has a challenge rating no higher than his own, or back into his true form. He reverts to his true form if he dies. Any equipment he is wearing or carrying is absorbed or borne by the new form (Felgolos's choice).",
+						"In a new form, Felgolos retains his alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. His statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Detect",
+					"entries": [
+						"Felgolos makes a Wisdom ({@skill Perception}) check."
+					]
+				},
+				{
+					"name": "Tail Attack",
+					"entries": [
+						"Felgolos makes a tail attack."
+					]
+				},
+				{
+					"name": "Wing Attack (Costs 2 Actions)",
+					"entries": [
+						"Felgolos beats his wings. Each creature within 10 feet of Felgolos must succeed on a {@dc 20} Dexterity saving throw or take 14 ({@damage 2d6 + 7}) bludgeoning damage and be knocked {@condition prone}. Felgolos can then fly up to half his flying speed."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious",
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Breath Weapon"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"CL"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened",
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength",
 				"wisdom"
 			]
 		},
