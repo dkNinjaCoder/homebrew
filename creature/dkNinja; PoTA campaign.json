@@ -2356,6 +2356,20 @@
 				"Legendary Resistances",
 				"Magic Resistance"
 			],
+			"tokenUrl": "https://raw.githubusercontent.com/dkNinjaCoder/homebrew/master/img/creature/lee-laileb-token.png",
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/dkNinjaCoder/homebrew/master/img/creature/lee-laileb.png"
+						}
+					}
+				]
+			},
 			"senseTags": [
 				"D",
 				"U"
