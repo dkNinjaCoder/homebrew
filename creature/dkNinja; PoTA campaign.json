@@ -17,7 +17,7 @@
 		],
 		"edition": "classic",
 		"dateAdded": 1725609600,
-		"dateLastModified": 1791683180
+		"dateLastModified": 1791733546
 	},
 	"monster": [
 		{
@@ -1657,6 +1657,310 @@
 				"name": "Phlegethos Chokepoint",
 				"source": "PoTACampaign"
 			}
+		},
+		{
+			"name": "Jethro Vimes",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PoTACampaign",
+			"page": 1,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item studded leather armor|phb|+1 studded leather}",
+						"Dexterity",
+						"{@item ring of protection|dmg|Ring of Protection}"
+					]
+				}
+			],
+			"hp": {
+				"average": 210,
+				"formula": "20d10 + 100"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 22,
+			"con": 20,
+			"int": 12,
+			"wis": 18,
+			"cha": 16,
+			"save": {
+				"str": "+8",
+				"dex": "+13",
+				"con": "+12",
+				"wis": "+11"
+			},
+			"skill": {
+				"acrobatics": "+13",
+				"athletics": "+8",
+				"deception": "+16",
+				"history": "+8",
+				"insight": "+11",
+				"medicine": "+11",
+				"perception": "+17",
+				"persuasion": "+16",
+				"sleight of hand": "+13",
+				"stealth": "+19",
+				"survival": "+11"
+			},
+			"senses": [
+				"darkvision 90 ft. (Umbral Sight)"
+			],
+			"passive": 27,
+			"languages": [
+				"Common",
+				"Thieves' cant",
+				"Draconic",
+				"Giant",
+				"Primordial",
+				"Sylvan"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Jethro is a 20th-level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 19}, {@hit 11} to hit with spell attacks). Jethro has the following ranger spells prepared:"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell detect magic}",
+								"{@spell disguise self}",
+								"{@spell hunter's mark}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell pass without trace}",
+								"{@spell rope trick}",
+								"{@spell silence}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals}",
+								"{@spell fear}",
+								"{@spell lightning arrow}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell freedom of movement}",
+								"{@spell greater invisibility}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell seeming}",
+								"{@spell swift quiver}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Assassinate",
+					"entries": [
+						"During his first turn, Jethro has advantage on attack rolls against any creature that hasn't taken a turn. Any hit he scores against a surprised creature is a critical hit."
+					]
+				},
+				{
+					"name": "Death Strike",
+					"entries": [
+						"When Jethro hits a creature that is surprised, it must make a {@dc 21} Constitution saving throw. On a failed save, double the damage of his attack against that creature."
+					]
+				},
+				{
+					"name": "Dread Ambusher",
+					"entries": [
+						"At the start of his first turn of each combat, Jethro's walking speed increases by 10 feet until the end of that turn. When he takes the Attack action on that turn, he can make one additional weapon attack as part of that action. If that attack hits, the target takes an extra 4 ({@damage 1d8}) damage of the weapon's damage type."
+					]
+				},
+				{
+					"name": "Evasion",
+					"entries": [
+						"If Jethro is subjected to an effect that allows him to make a Dexterity saving throw to take only half damage, he instead takes no damage if he succeeds on the saving throw, and only half damage if he fails."
+					]
+				},
+				{
+					"name": "Lucky (3/Day)",
+					"entries": [
+						"When Jethro makes an attack roll, ability check, or saving throw, or when an attack roll is made against him, he can roll an additional d20 and choose which die to use."
+					]
+				},
+				{
+					"name": "Reliable Talent",
+					"entries": [
+						"Whenever Jethro makes an ability check that lets him add his proficiency bonus, he can treat a d20 roll of 9 or lower as a 10."
+					]
+				},
+				{
+					"name": "Sharpshooter",
+					"entries": [
+						"Jethro's ranged weapon attacks ignore half cover and three-quarters cover, and attacking at long range doesn't impose disadvantage on his attack rolls. Before he makes an attack with a ranged weapon that he is proficient with, he can choose to take a -5 penalty to the attack roll to add +10 to the damage."
+					]
+				},
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"Once per turn, Jethro deals an extra 35 ({@damage 10d6}) damage to one creature he hits with a weapon attack if he has advantage on the attack roll, or if the target is within 5 feet of an ally of Jethro that isn't {@condition incapacitated} and Jethro doesn't have disadvantage on the roll."
+					]
+				},
+				{
+					"name": "Stone of Good Luck",
+					"entries": [
+						"Jethro carries a {@item stone of good luck||Stone of Good Luck}, granting him a +1 bonus to ability checks and saving throws."
+					]
+				},
+				{
+					"name": "Stalker's Flurry (1/Turn)",
+					"entries": [
+						"Once on each of Jethro's turns when he misses with a weapon attack, he can make another weapon attack as part of the same action."
+					]
+				},
+				{
+					"name": "Umbral Sight",
+					"entries": [
+						"Jethro is {@condition invisible} to any creature that relies on {@sense darkvision} to see him in darkness."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Jethro makes three weapon attacks."
+					]
+				},
+				{
+					"name": "Longbow +3",
+					"entries": [
+						"{@atk rw} {@hit 17} to hit, range 150/600 ft., one target. {@h}15 ({@damage 1d8 + 11}) piercing damage."
+					]
+				},
+				{
+					"name": "Shortsword +2",
+					"entries": [
+						"{@atk mw} {@hit 14} to hit, reach 5 ft., one target. {@h}11 ({@damage 1d6 + 8}) piercing damage."
+					]
+				},
+				{
+					"name": "Hand Crossbow +2",
+					"entries": [
+						"{@atk rw} {@hit 14} to hit, range 30/120 ft., one target. {@h}11 ({@damage 1d6 + 8}) piercing damage."
+					]
+				},
+				{
+					"name": "Dimension Door (1/Day)",
+					"entries": [
+						"Jethro casts {@spell dimension door} without expending a spell slot via his {@item cape of the mountebank||Cape of the Mountebank}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Jethro takes the {@action Dash}, {@action Disengage}, or {@action Hide} action."
+					]
+				},
+				{
+					"name": "Nature's Veil (6/Day)",
+					"entries": [
+						"Jethro magically turns {@condition invisible} along with any equipment he is wearing or carrying until the start of his next turn."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Jethro halves the damage that he takes from an attack that hits him. He must be able to see the attacker."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Quick Step",
+					"entries": [
+						"Jethro moves up to half his speed without provoking opportunity attacks."
+					]
+				},
+				{
+					"name": "Bowshot",
+					"entries": [
+						"Jethro makes one attack with his Longbow +3."
+					]
+				},
+				{
+					"name": "Vanish (Costs 2 Actions)",
+					"entries": [
+						"Jethro uses Cunning Action to {@action Hide} and moves up to his walking speed."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TC",
+				"DR",
+				"GI",
+				"P",
+				"S"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"L"
+			],
+			"spellcastingTags": [
+				"CR"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"conditionInflictSpell": [
+				"frightened",
+				"invisible"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			]
 		},
 		{
 			"name": "Lee (Laileb), Scion of Phlegethos",

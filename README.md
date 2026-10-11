@@ -11,6 +11,7 @@ Homebrew JSONs compatible with [5etools](https://5e.tools/).
   - **Clarion** — CR 24 Dragon
   - **Felgolos** — CR 15 Dragon
   - **Ghesh Mageddon, the Undying Dread** — CR 22 Undead (Dragonborn)
+  - **Jethro Vimes** — CR 17 Humanoid
   - **Lee (Laileb), Scion of Phlegethos** — CR 24 Fiend (Tiefling)
   - **Mind Flayer Assassin** — CR 8 Aberration
   - **Renwick the Ascendant** — CR 21 Undead (Lich), with Lair Actions and Regional Effects
