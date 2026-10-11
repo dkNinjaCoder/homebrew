@@ -17,7 +17,7 @@
 		],
 		"edition": "classic",
 		"dateAdded": 1725609600,
-		"dateLastModified": 1788714538
+		"dateLastModified": 1791683180
 	},
 	"monster": [
 		{
@@ -1487,6 +1487,12 @@
 					]
 				},
 				{
+					"name": "Reactive Vanguard",
+					"entries": [
+						"Ghesh can take one reaction on every creature's turn in combat, not just once per round."
+					]
+				},
+				{
 					"name": "Tunnel Sentinel",
 					"entries": [
 						"Ghesh can make opportunity attacks without expending his reaction. In addition, when a creature moves 5 feet or more while within his reach, he can use his reaction to make a melee weapon attack against it."
@@ -1563,6 +1569,12 @@
 					"entries": [
 						"When damaged by a creature within 60 feet that he can see, Ghesh forces it to make a {@dc 20} Dexterity saving throw, taking 33 ({@damage 6d10}) fire damage on a failed save, or half as much damage on a successful one."
 					]
+				},
+				{
+					"name": "Bulwark Parry",
+					"entries": [
+						"When an attack hits Ghesh, he adds his proficiency bonus (+6) to his AC against that attack, potentially causing it to miss."
+					]
 				}
 			],
 			"legendary": [
@@ -1582,6 +1594,12 @@
 					"name": "Shadow Step (Costs 2 Actions)",
 					"entries": [
 						"Ghesh teleports up to 30 feet to an unoccupied dim light or dark space he can see."
+					]
+				},
+				{
+					"name": "Warlord's Command",
+					"entries": [
+						"One summoned fiend within 30 feet of Ghesh can immediately use its reaction to make one weapon attack."
 					]
 				}
 			],
@@ -1634,7 +1652,11 @@
 				"dexterity",
 				"strength",
 				"wisdom"
-			]
+			],
+			"legendaryGroup": {
+				"name": "Phlegethos Chokepoint",
+				"source": "PoTACampaign"
+			}
 		},
 		{
 			"name": "Lee (Laileb), Scion of Phlegethos",
@@ -1833,12 +1855,6 @@
 			],
 			"trait": [
 				{
-					"name": "Lord of Phlegethos (Dual Mind)",
-					"entries": [
-						"Lee can concentrate on up to two spells simultaneously. When he makes a Constitution saving throw to maintain concentration, a single roll applies to both spells. In addition, allied fiends summoned by Lee gain temporary hit points equal to half his hit point maximum (139 hit points) upon appearing. While within 60 feet of Lee, these minions share his Magic Resistance trait and add +7 to their attack and damage rolls."
-					]
-				},
-				{
 					"name": "Dark One's Blessing",
 					"entries": [
 						"When Lee reduces a hostile creature to 0 hit points, he gains 23 temporary hit points."
@@ -1863,15 +1879,33 @@
 					]
 				},
 				{
+					"name": "Infernal Ward",
+					"entries": [
+						"Lee adds his Charisma modifier (+7) to his AC against the first attack roll made against him each round."
+					]
+				},
+				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
 						"If Lee fails a saving throw, he can choose to succeed instead."
 					]
 				},
 				{
+					"name": "Lord of Phlegethos (Dual Mind)",
+					"entries": [
+						"Lee can concentrate on up to two spells simultaneously. When he makes a Constitution saving throw to maintain concentration, a single roll applies to both spells. In addition, allied fiends summoned by Lee gain temporary hit points equal to half his hit point maximum (139 hit points) upon appearing. While within 60 feet of Lee, these minions share his Magic Resistance trait and add +7 to their attack and damage rolls."
+					]
+				},
+				{
 					"name": "Magic Resistance",
 					"entries": [
 						"Lee has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Prepared Legion",
+					"entries": [
+						"Lee begins any encounter in his lair or stronghold with a legion already conjured and under his control (as Summon Infernal Legion, without using the 1/Day use): 1 {@creature horned devil} and 1 {@creature bone devil} flanking Ghesh, and 2 {@creature spined devil||spined devils} hovering above Wairi. This frees Lee's first turn for a spell such as {@spell meteor swarm}, {@spell forcecage}, or {@spell synaptic static}."
 					]
 				},
 				{
@@ -2051,7 +2085,11 @@
 				"dexterity",
 				"intelligence",
 				"wisdom"
-			]
+			],
+			"legendaryGroup": {
+				"name": "Phlegethos Chokepoint",
+				"source": "PoTACampaign"
+			}
 		},
 		{
 			"name": "Mind Flayer Assassin",
@@ -3107,12 +3145,17 @@
 			],
 			"ac": [
 				{
-					"ac": 20,
+					"ac": 24,
 					"from": [
-						"{@item Breastplate +2}",
-						"shield",
+						"{@item Plate Armor +3||plate armor +3}",
+						"{@item Shield +3||shield +3}",
 						"dwarven resolve"
 					]
+				},
+				{
+					"ac": 26,
+					"condition": "with {@spell shield of faith}",
+					"braces": true
 				}
 			],
 			"hp": {
@@ -3380,6 +3423,12 @@
 					]
 				},
 				{
+					"name": "Blinding Flash",
+					"entries": [
+						"Wairi forces one creature he can see within 60 feet to succeed on a {@dc 21} Constitution saving throw or be {@condition blinded} until the end of its next turn."
+					]
+				},
+				{
 					"name": "Divine Ward (Costs 2 Actions)",
 					"entries": [
 						"Wairi casts {@spell shield of faith} or {@spell sanctuary} on an ally within range without expending a spell slot."
@@ -3459,6 +3508,21 @@
 					]
 				},
 				"If the Chimeric Elder Brain dies, these effects fade over the course of {@dice 1d10} days."
+			]
+		},
+		{
+			"name": "Phlegethos Chokepoint",
+			"source": "PoTACampaign",
+			"page": 1,
+			"lairActions": [
+				"While fighting at the chokepoint, the villains can call on the hellish stone around them. On initiative count 20 and again on initiative count 10 (losing initiative ties), the lair takes one of the following actions; it can't use the same effect twice in a row:",
+				{
+					"type": "list",
+					"items": [
+						"Count 20 — Phlegethos Hellfire Geyser. A 20-foot-radius, 60-foot-high cylinder of hellfire erupts at a point the villains choose within 120 feet. Each creature in the area must make a {@dc 22} Dexterity saving throw, taking 28 ({@damage 8d6}) fire damage and 28 ({@damage 8d6}) force damage on a failed save, or half as much damage on a successful one.",
+						"Count 10 — Grasping Chains. Spectral chains rise from the stone fissures. Up to three creatures of the villains' choice must succeed on a {@dc 21} Strength saving throw or be pulled 30 feet toward Ghesh and be {@condition restrained} until the end of their next turn."
+					]
+				}
 			]
 		},
 		{
