@@ -1920,6 +1920,7 @@
 					]
 				}
 			],
+			"tokenUrl": "https://raw.githubusercontent.com/dkNinjaCoder/homebrew/master/img/creature/jethro-vimes-token.png",
 			"hasFluff": true,
 			"hasFluffImages": true,
 			"fluff": {
