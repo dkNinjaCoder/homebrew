@@ -1828,15 +1828,15 @@
 					]
 				},
 				{
-					"name": "Stone of Good Luck",
-					"entries": [
-						"Jethro carries a {@item stone of good luck||Stone of Good Luck}, granting him a +1 bonus to ability checks and saving throws."
-					]
-				},
-				{
 					"name": "Stalker's Flurry (1/Turn)",
 					"entries": [
 						"Once on each of Jethro's turns when he misses with a weapon attack, he can make another weapon attack as part of the same action."
+					]
+				},
+				{
+					"name": "Stone of Good Luck",
+					"entries": [
+						"Jethro carries a {@item stone of good luck||Stone of Good Luck}, granting him a +1 bonus to ability checks and saving throws."
 					]
 				},
 				{
