@@ -6,6 +6,7 @@ Homebrew JSONs compatible with [5etools](https://5e.tools/).
 
 - **`creature/dkNinja; PoTA campaign.json`**: Single homebrew pack (**PoTA campaign**) containing:
   - **Belial (Prince of the Covetous, Lord of Lusts)** — CR 22 Fiend (Devil)
+  - **Chalaska Muruin** — CR 3 Humanoid (Human)
   - **Chimeric Abomination** — CR 17 Aberration
   - **Chimeric Elder Brain** — CR 18 Aberration, with Lair Actions and Regional Effects
   - **Clarion** — CR 24 Dragon
