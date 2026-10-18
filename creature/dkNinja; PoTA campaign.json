@@ -17,7 +17,7 @@
 		],
 		"edition": "classic",
 		"dateAdded": 1725609600,
-		"dateLastModified": 1792348638
+		"dateLastModified": 1792348682
 	},
 	"monster": [
 		{
@@ -517,6 +517,20 @@
 					]
 				}
 			],
+			"tokenUrl": "https://raw.githubusercontent.com/dkNinjaCoder/homebrew/master/img/creature/catti-brie-token.png",
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/dkNinjaCoder/homebrew/master/img/creature/catti-brie.png"
+						}
+					}
+				]
+			},
 			"senseTags": [
 				"D"
 			],
