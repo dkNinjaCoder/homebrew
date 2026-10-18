@@ -17,7 +17,7 @@
 		],
 		"edition": "classic",
 		"dateAdded": 1725609600,
-		"dateLastModified": 1792341330
+		"dateLastModified": 1792342617
 	},
 	"monster": [
 		{
@@ -3762,6 +3762,20 @@
 					]
 				}
 			],
+			"tokenUrl": "https://raw.githubusercontent.com/dkNinjaCoder/homebrew/master/img/creature/vaelakar-chrono-binder-token.png",
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/dkNinjaCoder/homebrew/master/img/creature/vaelakar-chrono-binder.png"
+						}
+					}
+				]
+			},
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance"
