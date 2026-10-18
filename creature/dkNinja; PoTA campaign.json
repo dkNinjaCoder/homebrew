@@ -17,7 +17,7 @@
 		],
 		"edition": "classic",
 		"dateAdded": 1725609600,
-		"dateLastModified": 1792342617
+		"dateLastModified": 1792348638
 	},
 	"monster": [
 		{
@@ -333,6 +333,211 @@
 			"savingThrowForcedSpell": [
 				"charisma",
 				"wisdom"
+			]
+		},
+		{
+			"name": "Catti-Brie",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PoTACampaign",
+			"page": 1,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 71,
+				"formula": "11d10 + 11"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 18,
+			"con": 12,
+			"int": 11,
+			"wis": 15,
+			"cha": 12,
+			"save": {
+				"str": "+4",
+				"dex": "+8"
+			},
+			"skill": {
+				"acrobatics": "+8",
+				"athletics": "+4",
+				"nature": "+4",
+				"perception": "+6",
+				"stealth": "+8",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"languages": [
+				"Common",
+				"Elvish",
+				"Undercommon"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Catti-Brie has advantage on saving throws against being {@condition charmed}, and magic can't put her to sleep."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, Catti-Brie has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight if she or the target of her attack is in direct sunlight."
+					]
+				},
+				{
+					"name": "Archery Fighting Style",
+					"entries": [
+						"Catti-Brie gains a +2 bonus to attack rolls she makes with ranged weapons (factored into actions)."
+					]
+				},
+				{
+					"name": "Land's Stride",
+					"entries": [
+						"Moving through nonmagical difficult terrain costs Catti-Brie no extra movement. She can pass through nonmagical plants without being slowed or taking damage from hazards like thorns, and has advantage on saving throws against magically manipulated plants."
+					]
+				},
+				{
+					"name": "Hide in Plain Sight",
+					"entries": [
+						"Catti-Brie can spend 1 minute creating camouflage to gain a +10 bonus to Dexterity ({@skill Stealth}) checks while pressed against a solid surface without moving or taking actions."
+					]
+				},
+				{
+					"name": "Colossus Slayer",
+					"entries": [
+						"Once per turn when Catti-Brie hits a creature with a weapon attack, that creature takes an extra 4 ({@damage 1d8}) damage if it is below its hit point maximum."
+					]
+				},
+				{
+					"name": "Escape the Horde",
+					"entries": [
+						"Opportunity attacks against Catti-Brie are made with disadvantage."
+					]
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Catti-Brie's innate spellcasting ability is Charisma (spell save {@dc 13}). She can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell dancing lights}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell faerie fire}",
+							"{@spell darkness}"
+						]
+					},
+					"ability": "cha"
+				},
+				{
+					"name": "Ranger Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Catti-Brie is an 11th-level spellcaster. Her spellcasting ability is Wisdom (spell save {@dc 14}, {@hit 6} to hit with spell attacks). She has the following ranger spells prepared:"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell hunter's mark}",
+								"{@spell longstrider}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell pass without trace}",
+								"{@spell spike growth}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure barrage}",
+								"{@spell lightning arrow}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Catti-Brie makes two ranged attacks or two melee attacks."
+					]
+				},
+				{
+					"name": "Taulmaril (Magic Longbow)",
+					"entries": [
+						"{@atk rw} {@hit 10} to hit, range 150/600 ft., one target. {@h}8 ({@damage 1d8 + 4}) piercing damage."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage."
+					]
+				},
+				{
+					"name": "Volley",
+					"entries": [
+						"Catti-Brie makes a ranged attack against any number of creatures within 10 feet of a point she can see within weapon range (separate attack roll per target)."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"U"
+			],
+			"damageTags": [
+				"P"
+			],
+			"spellcastingTags": [
+				"I",
+				"CR"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
 			]
 		},
 		{
