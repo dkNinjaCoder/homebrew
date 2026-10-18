@@ -18,6 +18,7 @@ Homebrew JSONs compatible with [5etools](https://5e.tools/).
   - **Renwick the Ascendant** — CR 21 Undead (Lich), with Lair Actions and Regional Effects
   - **Tanazir Silverquil** — CR 26 Dragon, with Mythic Phase, Lair Actions, and Regional Effects
   - **Ulitharid** — CR 9 Aberration
+  - **Vaelakar the Chrono-Binder** — CR 20 Humanoid (Human, Netherese)
   - **Wairi Silvermoustache, Exalted High Marshal** — CR 22 Humanoid (Dwarf)
 
 All creatures are grouped under the single source **PoTA campaign (PoTA)**.

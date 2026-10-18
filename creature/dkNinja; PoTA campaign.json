@@ -17,7 +17,7 @@
 		],
 		"edition": "classic",
 		"dateAdded": 1725609600,
-		"dateLastModified": 1791739845
+		"dateLastModified": 1792341330
 	},
 	"monster": [
 		{
@@ -3557,6 +3557,241 @@
 			],
 			"savingThrowForced": [
 				"intelligence"
+			]
+		},
+		{
+			"name": "Vaelakar the Chrono-Binder",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PoTACampaign",
+			"page": 1,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"netherese"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"chronal ward",
+						"{@spell mage armor}"
+					]
+				}
+			],
+			"hp": {
+				"average": 228,
+				"formula": "24d8 + 120"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 20,
+			"int": 23,
+			"wis": 16,
+			"cha": 14,
+			"save": {
+				"con": "+11",
+				"int": "+12",
+				"wis": "+9"
+			},
+			"skill": {
+				"arcana": "+18",
+				"history": "+18",
+				"perception": "+9"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 19,
+			"resist": [
+				"force",
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Loross",
+				"Netherese"
+			],
+			"cr": "20",
+			"trait": [
+				{
+					"name": "Chrono-Anchor",
+					"entries": [
+						"Vaelakar cannot have his age magically altered, cannot be forcibly moved through time or extraplanar banishment without his consent, and is immune to the slowed effect."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"If Vaelakar fails a saving throw, he can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Vaelakar has advantage on saving throws against spells and other magical effects."
+					]
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Chronal Mastery",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Vaelakar is a 20th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 20}, {@hit 12} to hit with spell attacks). He requires no material components to cast his spells and has the following wizard spells prepared:"
+					],
+					"will": [
+						"{@spell mage hand}",
+						"{@spell minor illusion}",
+						"{@spell prestidigitation}",
+						"{@spell ray of frost}"
+					],
+					"daily": {
+						"1": [
+							"{@spell reverse gravity}",
+							"{@spell time stop}",
+							"{@spell time ravage}"
+						],
+						"2": [
+							"{@spell disintegrate}",
+							"{@spell globe of invulnerability}",
+							"{@spell hold monster}"
+						],
+						"3": [
+							"{@spell counterspell}",
+							"{@spell dimension door}",
+							"{@spell slow}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Vaelakar makes three Chronal Lance attacks, or he makes two Chronal Lance attacks and uses Command Constructs."
+					]
+				},
+				{
+					"name": "Chronal Lance",
+					"entries": [
+						"{@atk ms,rs} {@hit 12} to hit, reach 5 ft. or range 120 ft., one target. {@h}22 ({@damage 3d10 + 6}) force damage plus 11 ({@damage 2d10}) necrotic damage. If the target is a creature, its movement speed is reduced by 10 feet until the end of its next turn (stackable up to 30 feet)."
+					]
+				},
+				{
+					"name": "Command Constructs",
+					"entries": [
+						"Vaelakar mentally directs up to two allied constructs within 120 feet of him. Each target can immediately use its reaction to make one melee attack or move up to half its speed without provoking opportunity attacks."
+					]
+				},
+				{
+					"name": "Entropy Burst {@recharge 5}",
+					"entries": [
+						"Vaelakar releases a wave of rapid temporal aging in a 30-foot-radius sphere centered on himself. Each non-construct creature in that area must make a {@dc 20} Constitution saving throw, taking 49 ({@damage 9d10}) necrotic damage on a failed save, or half as much on a successful one. On a failure, a creature also has disadvantage on attack rolls and ability checks until the start of Vaelakar's next turn."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Temporal Step",
+					"entries": [
+						"Vaelakar magically teleports up to 30 feet to an unoccupied space he can see."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Stutter Step",
+					"entries": [
+						"When a creature Vaelakar can see targets him with an attack roll, Vaelakar bends time to displace his position. He teleports up to 15 feet to an unoccupied space he can see. Until the start of his next turn, attack rolls against him have disadvantage."
+					]
+				},
+				{
+					"name": "Negate Magic",
+					"entries": [
+						"When a creature within 60 feet of Vaelakar casts a spell of 5th level or lower, Vaelakar can counter it as if casting {@spell counterspell} without expending a spell slot."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Chronal Dart",
+					"entries": [
+						"Vaelakar makes one Chronal Lance attack."
+					]
+				},
+				{
+					"name": "Shift Timeline (Costs 2 Actions)",
+					"entries": [
+						"Vaelakar teleports up to 30 feet to an unoccupied space he can see, and each creature within 10 feet of the destination space must succeed on a {@dc 20} Strength saving throw or be knocked {@condition prone} by displaced kinetic force."
+					]
+				},
+				{
+					"name": "Construct Overdrive (Costs 2 Actions)",
+					"entries": [
+						"One allied construct within 60 feet of Vaelakar takes an immediate attack or uses one of its available recharge abilities."
+					]
+				},
+				{
+					"name": "Paradox Surge (Costs 3 Actions)",
+					"entries": [
+						"Vaelakar recharges and uses Entropy Burst."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"O",
+				"N"
+			],
+			"miscTags": [
+				"MS",
+				"RS",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
 			]
 		},
 		{
