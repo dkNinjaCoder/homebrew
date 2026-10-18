@@ -17,7 +17,7 @@
 		],
 		"edition": "classic",
 		"dateAdded": 1725609600,
-		"dateLastModified": 1792348682
+		"dateLastModified": 1792348838
 	},
 	"monster": [
 		{
@@ -336,7 +336,7 @@
 			]
 		},
 		{
-			"name": "Catti-Brie",
+			"name": "Catti-Brie Do'Urden",
 			"isNpc": true,
 			"isNamedCreature": true,
 			"source": "PoTACampaign",
